@@ -9,15 +9,31 @@ export default function Home() {
     <div className="w-full">
       <ParallaxHero
         backgroundImage="/images/HomeBG.jpg"
-        containerClass="h-[400px] md:h-[700px] flex flex-col items-center justify-center"
-        overlayClass="bg-black/30"
+        containerClass="h-[80vh] md:h-[90vh] min-h-[600px] flex flex-col items-center justify-center"
+        overlayClass="bg-gradient-to-r from-black/80 via-black/40 to-transparent"
       >
-        <FadeIn className="relative z-10 text-start px-4 flex flex-col w-full max-w-[90%]">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-md">
-            Nấm Lim Xanh <br />
-            Trường Lâm
-          </h1>
-        </FadeIn>
+        <div className="relative z-10 w-full max-w-[95%] 2xl:max-w-[1440px] px-6 flex flex-col items-start mt-16 md:mt-24">
+          <FadeIn className="flex flex-col max-w-2xl">
+            <h1 className="text-5xl md:text-7xl lg:text-[80px] font-bold text-white leading-[1.1] tracking-tight mb-6 drop-shadow-lg">
+              Nấm Lim Xanh <br />
+              <span className="text-[#D4A373]">Trường Lâm</span>
+            </h1>
+
+            <p className="text-white/90 text-base md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-10 drop-shadow-md">
+              Món quà kết tinh từ quy trình nuôi trồng khép kín đạt chuẩn quốc tế, mang lại sức khỏe
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+              <Link href="/products" className="flex items-center justify-center gap-2 bg-[#D4A373] text-[#3E1C16] hover:bg-[#c39162] transition-colors duration-300 rounded-full px-8 py-4 text-sm md:text-base font-bold shadow-lg w-full sm:w-auto">
+                Khám phá sản phẩm
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link href="/about" className="flex items-center justify-center gap-2 bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white transition-colors duration-300 rounded-full px-8 py-4 text-sm md:text-base font-bold w-full sm:w-auto backdrop-blur-sm">
+                Về chúng tôi
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
       </ParallaxHero>
 
       {/* Combined Wrapper for About and Vườn dược liệu Sections */}
@@ -55,7 +71,7 @@ export default function Home() {
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-[2px] bg-[#D4A373]"></div>
                 <span className="text-[#D4A373] uppercase tracking-widest text-sm font-bold">
-                  VỀ TRƯỜNG LÂM
+                  VỀ NẤM LIM XANH TRƯỜNG LÂM
                 </span>
               </div>
 
@@ -244,24 +260,24 @@ export default function Home() {
       </section>
 
       {/* Nấm và Chế phẩm Section */}
-      <section className="w-full py-15 md:py-22 px-4 bg-white flex flex-col items-center overflow-hidden">
-        <FadeIn className="w-full max-w-[90%] mb-12 flex flex-col items-center text-center">
-          <div className="w-fit border border-primary/40 text-primary uppercase tracking-widest text-[11px] font-bold px-4 py-1.5 rounded-full mb-4 bg-background/50 backdrop-blur-sm">
+      <section className="w-full py-16 md:py-20 px-4 bg-white flex flex-col items-center overflow-hidden">
+        <FadeIn className="w-full max-w-[95%] 2xl:max-w-[1440px] mb-10 flex flex-col items-center text-center">
+          <div className="w-fit border border-[#D4A373]/40 text-[#D4A373] uppercase tracking-widest text-[11px] font-bold px-4 py-1.5 rounded-full mb-4 bg-background/50 backdrop-blur-sm">
             Nấm và Chế phẩm
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3E1C16]">
             Sản Phẩm Của Chúng Tôi
           </h2>
         </FadeIn>
 
         {/* Filter Tabs */}
-        <FadeIn delay={0.1} className="flex items-center gap-2 md:gap-4 mb-10 overflow-x-auto pb-2 scrollbar-hide max-w-[90%] w-full justify-start md:justify-center">
+        <FadeIn delay={0.1} className="flex items-center gap-2 md:gap-4 mb-10 overflow-x-auto pb-2 scrollbar-hide max-w-[95%] 2xl:max-w-[1440px] w-full justify-start md:justify-center">
           {["Tất cả", "Nấm Nguyên Khúc", "Nấm Thái Lát", "Chế Phẩm Khác"].map((tab, index) => (
             <button
               key={index}
-              className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-medium transition-colors border ${index === 0
-                ? "bg-foreground text-background border-foreground"
-                : "bg-white text-foreground hover:bg-black/5 border-black/10"
+              className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-bold transition-colors border ${index === 0
+                ? "bg-[#3E1C16] text-white border-[#3E1C16]"
+                : "bg-white text-foreground hover:bg-[#D4A373]/10 border-black/10"
                 }`}
             >
               {tab}
@@ -270,7 +286,7 @@ export default function Home() {
         </FadeIn>
 
         {/* Product Grid */}
-        <FadeIn delay={0.2} className="w-full max-w-[90%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
+        <FadeIn delay={0.2} className="w-full max-w-[95%] 2xl:max-w-[1440px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
           {[
             { tag: "Nổi bật", cat: "Nấm Khúc", title: "Nấm Lim Xanh Nguyên Khúc", img: "/images/BoxGift.jpg" },
             { tag: "Bán chạy", cat: "Thái Lát", title: "Nấm Lim Xanh Thái Lát", img: "/images/BoxGift.jpg" },

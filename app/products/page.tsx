@@ -30,14 +30,21 @@ export default function ProductsPage() {
     <div className="w-full bg-[#FAFAFA]">
       <ParallaxHero
         backgroundImage="/images/HomeBG.jpg"
-        containerClass="h-[400px] md:h-[500px] flex flex-col items-center justify-center"
-        overlayClass="bg-black/30"
+        containerClass="h-[40vh] md:h-[50vh] min-h-[400px] flex flex-col items-center justify-center mt-10 md:mt-0"
+        overlayClass="bg-gradient-to-r from-black/80 via-black/40 to-transparent"
       >
-        <FadeIn className="relative z-10 text-start px-4 flex flex-col w-full max-w-[90%]">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-2 drop-shadow-md">
-            Sản phẩm <br />Nấm Lim Xanh<br /> Trường Lâm
-          </h1>
-        </FadeIn>
+        <div className="relative z-10 w-full max-w-[95%] 2xl:max-w-[1440px] px-6 flex flex-col items-start mt-16 md:mt-20">
+          <FadeIn className="flex flex-col max-w-2xl">
+            <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold text-white leading-[1.1] tracking-tight mb-4 drop-shadow-lg">
+              Sản phẩm <br />
+              <span className="text-[#D4A373]">Nấm Lim Xanh</span>
+            </h1>
+
+            <p className="text-white/90 text-sm md:text-base lg:text-lg leading-relaxed drop-shadow-md max-w-xl">
+              Khám phá các sản phẩm nguyên bản và chế phẩm cao cấp
+            </p>
+          </FadeIn>
+        </div>
       </ParallaxHero>
 
       {/* Main Content */}
@@ -60,11 +67,10 @@ export default function ProductsPage() {
                     <button
                       key={cat.id}
                       onClick={() => setActiveCategory(cat.id)}
-                      className={`flex items-center gap-3 px-5 py-4 rounded-xl shadow-sm transition-colors text-left ${
-                        isActive
-                          ? "bg-[#3E1C16] text-white"
-                          : "bg-white text-foreground hover:bg-black/5 border border-black/5"
-                      }`}
+                      className={`flex items-center gap-3 px-5 py-4 rounded-xl shadow-sm transition-colors text-left ${isActive
+                        ? "bg-[#3E1C16] text-white"
+                        : "bg-white text-foreground hover:bg-black/5 border border-black/5"
+                        }`}
                     >
                       <Icon className={`w-5 h-5 ${isActive ? "" : "text-[#D4A373]"}`} />
                       <span className={`font-semibold text-sm ${isActive ? "" : "text-[#3E1C16]/80 hover:text-[#3E1C16]"}`}>
@@ -147,7 +153,7 @@ export default function ProductsPage() {
                 <p className="text-foreground/60 max-w-md">
                   Hiện tại danh mục này chưa có sản phẩm nào. Vui lòng quay lại sau hoặc xem các danh mục khác.
                 </p>
-                <button 
+                <button
                   onClick={() => setActiveCategory("all")}
                   className="mt-6 px-6 py-2.5 bg-[#3E1C16] text-white rounded-full text-sm font-semibold hover:bg-[#3E1C16]/90 transition-colors"
                 >
