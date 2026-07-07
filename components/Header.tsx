@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { ArrowRight, Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -14,51 +15,57 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <>
       <header className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 w-full">
-        <div className="flex items-center justify-between bg-header-bg shadow-sm rounded-full px-4 py-3 w-full max-w-[90%] border border-black/5">
+        <div className="flex items-center justify-between bg-header-bg shadow-sm rounded-full px-6 py-4 w-full max-w-[95%] 2xl:max-w-[1440px] border border-black/5">
 
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 group pl-2">
-            <div className="flex items-center justify-center w-10 h-10 rounded-full overflow-hidden">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full overflow-hidden">
               <Image
                 src="/images/LogoNoText.png"
                 alt="Logo Trường Lâm"
-                width={40}
-                height={40}
+                width={48}
+                height={48}
                 className="object-cover w-full h-full"
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-semibold text-foreground tracking-tight leading-none">Nấm Lim Xanh</span>
-              <span className="text-[12px] font-bold text-foreground/70 leading-none mt-1 uppercase tracking-wider">Trường Lâm</span>
+              <span className="text-xl font-bold text-foreground tracking-tight leading-none">Nấm Lim Xanh</span>
+              <span className="text-sm font-bold text-[#D4A373] leading-none mt-1 uppercase tracking-widest">Trường Lâm</span>
             </div>
           </Link>
 
           {/* Navigation Links */}
-          <nav className="hidden min-[1075px]:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
+          <nav className="hidden min-[1075px]:flex items-center gap-10">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || (link.href !== '/' && pathname?.startsWith(link.href));
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`text-base font-bold transition-colors ${
+                    isActive ? "text-[#D4A373]" : "text-foreground/80 hover:text-[#D4A373]"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="flex items-center gap-2">
             {/* Call to Action Button */}
             <Link
               href="/contact"
-              className="hidden min-[1075px]:flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 rounded-full px-6 py-2.5 text-sm font-medium shadow-sm hover:shadow-md"
+              className="hidden min-[1075px]:flex items-center gap-2 bg-[#3E1C16] text-white hover:bg-[#D4A373] transition-colors duration-300 rounded-full px-8 py-3 text-base font-bold shadow-sm hover:shadow-md"
             >
-              Contact us
-              <ArrowRight className="w-4 h-4" />
+              Liên hệ ngay
+              <ArrowRight className="w-5 h-5" />
             </Link>
 
             {/* Mobile Menu Toggle */}

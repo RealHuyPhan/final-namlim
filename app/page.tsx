@@ -1,5 +1,5 @@
 import ParallaxHero from "@/components/ui/ParallaxHero";
-import { ArrowRight, Leaf, Tractor, Sprout } from "lucide-react";
+import { ArrowRight, Leaf, Tractor, Sprout, CheckCircle2, Award } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/ui/FadeIn";
@@ -32,51 +32,92 @@ export default function Home() {
 
         {/* About Section */}
         <section className="relative w-full pt-20 md:pt-32 pb-10 md:pb-16 px-4 flex justify-center z-10">
-          <div className="w-full max-w-[90%] grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
-            {/* Left Column */}
-            <FadeIn direction="right" className="flex flex-col items-start lg:items-center justify-center h-full w-full">
-              <div className="w-full lg:w-fit flex flex-col items-start">
-                <div className="w-fit border border-primary/40 text-primary uppercase tracking-widest text-[11px] font-bold px-4 py-1.5 rounded-full mb-8 bg-background/50 backdrop-blur-sm">
-                  Nấm lim xanh
-                </div>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] tracking-tight">
-                  Giới thiệu <br />
-                  Về Nấm Lim Xanh <br />
-                  Trường Lâm
-                </h2>
-                <button className="flex items-center gap-2 w-fit bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 rounded-full px-8 py-3.5 text-base font-medium shadow-sm hover:shadow-md relative z-20 mt-10">
-                  Khám phá thêm
-                </button>
+          <div className="w-full max-w-[95%] 2xl:max-w-[1440px] grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+            {/* Left Column - Image Collage */}
+            <FadeIn direction="right" className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] flex items-center justify-center mt-10 lg:mt-0">
+              {/* Main Large Image */}
+              <div className="absolute top-0 right-4 sm:right-10 md:right-20 w-[75%] sm:w-[70%] h-[80%] rounded-[32px] overflow-hidden shadow-2xl border-4 border-white bg-black/5">
+                <Image src="/images/BoxGift.jpg" alt="Vườn dược liệu Nấm Lim Xanh" fill className="object-cover" />
               </div>
+
+              {/* Secondary Overlapping Image */}
+              <div className="absolute bottom-0 left-0 w-[60%] sm:w-[55%] h-[55%] rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-4 border-white bg-black/5 z-10">
+                <Image src="/images/HomeBG.jpg" alt="Thu hoạch Nấm Lim Xanh" fill className="object-cover" />
+              </div>
+
+              {/* Floating Badge */}
+
             </FadeIn>
 
-            {/* Right Column */}
-            <FadeIn direction="left" delay={0.2} className="flex flex-col items-start lg:pt-16">
-              <p className="text-foreground/80 text-lg md:text-xl leading-relaxed mb-4">
-                Sản phẩm là kết quả của nhiều năm nghiên cứu chuyên sâu trên nền tảng khoa học, nghiên cứu cấp Bộ của Bộ Nông nghiệp và Phát triển nông thôn phát triển nguồn gen nấm lim xanh.
-              </p>
-              <p className="text-foreground/80 text-lg md:text-xl leading-relaxed mb-4">
-                Được nuôi trồng tại Vườn Dược Liệu Hợp Tác Xã Hải Nam, sản phẩm là sự kết hợp hài hòa giữa di sản tri thức về thảo dược truyền thống và công nghệ sinh học hiện đại. Chúng tôi tự hào ứng dụng thành công quy trình nuôi trồng kiểm soát khép kín nghiêm ngặt đạt tiêu chuẩn HACCP, đảm bảo chất lượng vàng ổn định từ giống gốc đến thành phẩm.
-              </p>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium flex items-center gap-2 relative z-20">
-                Sổ Tay Hướng Dẫn Áp Dụng HACCP, GMP & GHP Cho Doanh Nghiệp Thực Phẩm (PDF)
-              </a>
+            {/* Right Column - Content */}
+            <FadeIn direction="left" delay={0.2} className="flex flex-col items-start w-full">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-[2px] bg-[#D4A373]"></div>
+                <span className="text-[#D4A373] uppercase tracking-widest text-sm font-bold">
+                  VỀ TRƯỜNG LÂM
+                </span>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-[#3E1C16] leading-[1.15] tracking-tight mb-6">
+                Tinh hoa Nấm Lim Xanh <br />
+                <span className="text-[#D4A373]">Trường Lâm</span>
+              </h2>
+
+              <div className="text-foreground/70 text-base md:text-lg leading-relaxed mb-8 space-y-4 text-justify">
+                <p>
+                  Sản phẩm là kết quả của nhiều năm nghiên cứu chuyên sâu trên nền tảng khoa học, đề tài cấp Bộ của Bộ Nông nghiệp và Phát triển nông thôn phát triển nguồn gen nấm lim xanh.
+                </p>
+                <p>
+                  Được nuôi trồng tại Vườn Dược Liệu Hợp Tác Xã Hải Nam, sản phẩm là sự kết hợp hài hòa giữa di sản tri thức thảo dược truyền thống và công nghệ sinh học hiện đại.
+                </p>
+              </div>
+
+              {/* Checklist */}
+              <div className="flex flex-col gap-4 mb-10 w-full">
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#D4A373] shrink-0 mt-0.5" />
+                  <span className="text-foreground/80 font-medium">Quy trình nuôi trồng kiểm soát khép kín đạt tiêu chuẩn HACCP.</span>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#D4A373] shrink-0 mt-0.5" />
+                  <span className="text-foreground/80 font-medium">Sự kết hợp hoàn hảo giữa công nghệ sinh học và di sản y học.</span>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#D4A373] shrink-0 mt-0.5" />
+                  <span className="text-foreground/80 font-medium">Chất lượng vàng ổn định từ nguồn giống gốc đến thành phẩm.</span>
+                </div>
+              </div>
+
+              {/* Actions */}
+              <div className="flex flex-col sm:flex-row items-center gap-6 w-full">
+                <Link href="/products" className="flex items-center justify-center gap-2 bg-[#3E1C16] text-white hover:bg-[#D4A373] transition-colors duration-300 rounded-full px-8 py-4 text-base font-bold shadow-md hover:shadow-lg w-full sm:w-auto">
+                  Xem sản phẩm
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="text-[#3E1C16] hover:text-[#D4A373] font-bold flex items-center justify-center gap-2 transition-colors text-sm underline underline-offset-4 w-full sm:w-auto text-center">
+                  Tải sổ tay HACCP, GMP & GHP (PDF)
+                </a>
+              </div>
             </FadeIn>
           </div>
         </section>
 
         {/* Mô hình vườn dược liệu Section */}
-        <section className="relative w-full pt-10 md:pt-40 pb-20 md:pb-32 px-4 flex justify-center z-10">
-          <div className="w-full max-w-[90%] flex flex-col gap-12 lg:gap-16">
+        <section className="relative w-full py-16 md:py-24 px-4 flex justify-center z-10">
+          <div className="w-full max-w-[95%] 2xl:max-w-[1440px] flex flex-col gap-10 lg:gap-12">
             {/* Title */}
             <div className="flex flex-col items-center text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+              <div className="w-fit border border-[#D4A373]/40 text-[#D4A373] uppercase tracking-widest text-[11px] font-bold px-4 py-1.5 rounded-full mb-4 bg-background/50 backdrop-blur-sm">
+                Vườn Dược Liệu Hải Nam
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3E1C16]">
                 Mô Hình Trồng Nấm Khép Kín
               </h2>
             </div>
 
             {/* Bento Grid Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-4 w-full lg:h-[600px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-4 w-full lg:h-[480px]">
               {/* Item 1 - Large Left */}
               <Link href="#" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group md:col-span-2 lg:col-span-2 lg:row-span-2 min-h-[350px] lg:min-h-0 border-2 border-white/20 bg-black/10">
                 <Image src="/images/BoxGift.jpg" alt="Kỹ thuật Trồng Nấm Khép Kín" fill className="object-cover transition-transform duration-500" />
@@ -132,63 +173,6 @@ export default function Home() {
           </div>
         </section>
       </div>
-
-      {/* Nấm và Chế phẩm Section */}
-      <section className="w-full py-15 md:py-22 px-4 bg-white flex flex-col items-center overflow-hidden">
-        <FadeIn className="w-full max-w-[90%] mb-12 flex flex-col items-center text-center">
-          <div className="w-fit border border-primary/40 text-primary uppercase tracking-widest text-[11px] font-bold px-4 py-1.5 rounded-full mb-4 bg-background/50 backdrop-blur-sm">
-            Nấm và Chế phẩm
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Sản Phẩm Của Chúng Tôi
-          </h2>
-        </FadeIn>
-
-        {/* Filter Tabs */}
-        <FadeIn delay={0.1} className="flex items-center gap-2 md:gap-4 mb-10 overflow-x-auto pb-2 scrollbar-hide max-w-[90%] w-full justify-start md:justify-center">
-          {["Tất cả", "Nấm Nguyên Khúc", "Nấm Thái Lát", "Chế Phẩm Khác"].map((tab, index) => (
-            <button
-              key={index}
-              className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-medium transition-colors border ${index === 0
-                  ? "bg-foreground text-background border-foreground"
-                  : "bg-white text-foreground hover:bg-black/5 border-black/10"
-                }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </FadeIn>
-
-        {/* Product Grid */}
-        <FadeIn delay={0.2} className="w-full max-w-[90%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
-          {[
-            { tag: "Nổi bật", cat: "Nấm Khúc", title: "Nấm Lim Xanh Nguyên Khúc", img: "/images/BoxGift.jpg" },
-            { tag: "Bán chạy", cat: "Thái Lát", title: "Nấm Lim Xanh Thái Lát", img: "/images/BoxGift.jpg" },
-            { tag: "Mới", cat: "Chế Phẩm", title: "Trà Túi Lọc Nấm Lim Xanh", img: "/images/BoxGift.jpg" },
-            { tag: "Cao cấp", cat: "Chế Phẩm", title: "Bào Tử Nấm Lim Xanh", img: "/images/BoxGift.jpg" },
-          ].map((item, index) => (
-            <Link href="#" key={index} className="flex flex-col group">
-              {/* Image Container */}
-              <div className="relative w-full aspect-square bg-[#F7F7F7] rounded-3xl overflow-hidden mb-4 border border-black/5">
-                <div className="absolute top-4 left-4 bg-white text-foreground px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm z-10">
-                  {item.tag}
-                </div>
-                <Image src={item.img} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-              </div>
-
-              {/* Text Info */}
-              <div className="flex flex-col px-2">
-                <span className="text-foreground/50 text-xs font-medium uppercase tracking-wider mb-1.5">
-                  {item.cat}
-                </span>
-                <h3 className="text-foreground font-bold text-lg md:text-xl leading-snug group-hover:text-primary transition-colors">
-                  {item.title}
-                </h3>
-              </div>
-            </Link>
-          ))}
-        </FadeIn>
-      </section>
 
       {/* Lợi Ích Của Nấm Section */}
       <section className="w-full py-20 md:py-32 px-4 bg-white flex flex-col items-center overflow-hidden">
@@ -258,6 +242,65 @@ export default function Home() {
           </FadeIn>
         </div>
       </section>
+
+      {/* Nấm và Chế phẩm Section */}
+      <section className="w-full py-15 md:py-22 px-4 bg-white flex flex-col items-center overflow-hidden">
+        <FadeIn className="w-full max-w-[90%] mb-12 flex flex-col items-center text-center">
+          <div className="w-fit border border-primary/40 text-primary uppercase tracking-widest text-[11px] font-bold px-4 py-1.5 rounded-full mb-4 bg-background/50 backdrop-blur-sm">
+            Nấm và Chế phẩm
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            Sản Phẩm Của Chúng Tôi
+          </h2>
+        </FadeIn>
+
+        {/* Filter Tabs */}
+        <FadeIn delay={0.1} className="flex items-center gap-2 md:gap-4 mb-10 overflow-x-auto pb-2 scrollbar-hide max-w-[90%] w-full justify-start md:justify-center">
+          {["Tất cả", "Nấm Nguyên Khúc", "Nấm Thái Lát", "Chế Phẩm Khác"].map((tab, index) => (
+            <button
+              key={index}
+              className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-medium transition-colors border ${index === 0
+                ? "bg-foreground text-background border-foreground"
+                : "bg-white text-foreground hover:bg-black/5 border-black/10"
+                }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </FadeIn>
+
+        {/* Product Grid */}
+        <FadeIn delay={0.2} className="w-full max-w-[90%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
+          {[
+            { tag: "Nổi bật", cat: "Nấm Khúc", title: "Nấm Lim Xanh Nguyên Khúc", img: "/images/BoxGift.jpg" },
+            { tag: "Bán chạy", cat: "Thái Lát", title: "Nấm Lim Xanh Thái Lát", img: "/images/BoxGift.jpg" },
+            { tag: "Mới", cat: "Chế Phẩm", title: "Trà Túi Lọc Nấm Lim Xanh", img: "/images/BoxGift.jpg" },
+            { tag: "Cao cấp", cat: "Chế Phẩm", title: "Bào Tử Nấm Lim Xanh", img: "/images/BoxGift.jpg" },
+          ].map((item, index) => (
+            <Link href="#" key={index} className="flex flex-col group">
+              {/* Image Container */}
+              <div className="relative w-full aspect-square bg-[#F7F7F7] rounded-3xl overflow-hidden mb-4 border border-black/5">
+                <div className="absolute top-4 left-4 bg-white text-foreground px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm z-10">
+                  {item.tag}
+                </div>
+                <Image src={item.img} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              </div>
+
+              {/* Text Info */}
+              <div className="flex flex-col px-2">
+                <span className="text-foreground/50 text-xs font-medium uppercase tracking-wider mb-1.5">
+                  {item.cat}
+                </span>
+                <h3 className="text-foreground font-bold text-lg md:text-xl leading-snug group-hover:text-primary transition-colors">
+                  {item.title}
+                </h3>
+              </div>
+            </Link>
+          ))}
+        </FadeIn>
+      </section>
+
+
 
       {/* FAQ Section */}
       <section className="w-full py-20 md:py-32 bg-primary/5 flex flex-col items-center">

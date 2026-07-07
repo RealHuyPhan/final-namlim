@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "id": "nam-lim-xanh-kho-nguyen-tai",
+      "tag": "BÁN CHẠY",
+      "image": "/images/BoxGift.jpg",
+      "category": "NẤM LIM XANH KHÔ NGUYÊN TAI",
+      "title": "Nấm lim xanh khô nguyên tai",
+      "description": "Thu hoạch trực tiếp từ vùng trồng đạt chuẩn. Giữ nguyên vẹn dược tính tự nhiên, được đóng gói hút chân không hai lớp bảo quản.",
+      "packing": "Đóng gói hút chân không: 100g, 200g, 500g."
+    },
+    {
+      "id": "nam-lim-xanh-thai-lat",
+      "tag": "KHUYÊN DÙNG",
+      "image": "/images/BoxGift.jpg",
+      "category": "NẤM LIM XANH THÁI LÁT",
+      "title": "Nấm lim xanh thái lát",
+      "description": "Đã được sơ chế thái lát sẵn, tiện lợi và dễ sử dụng để hãm trà hoặc sắc nước uống hằng ngày.",
+      "packing": "Hộp quà biếu cao cấp: 250g, 500g."
+    },
+    {
+      "id": "tra-tui-loc-nam-lim-xanh",
+      "tag": "TIỆN LỢI",
+      "image": "/images/BoxGift.jpg",
+      "category": "TRÀ TÚI LỌC NẤM LIM XANH",
+      "title": "Trà túi lọc nấm lim xanh",
+      "description": "Chế biến theo quy trình khép kín: sấy lạnh -> nghiền -> đóng túi lọc tự động. Là dòng sản phẩm tiện lợi, hướng tới phân khúc bán lẻ và các siêu thị.",
+      "packing": "Hộp 20 túi lọc x 2g."
+    }
+  ]
+}
