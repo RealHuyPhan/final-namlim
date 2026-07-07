@@ -1,65 +1,317 @@
+import ParallaxHero from "@/components/ui/ParallaxHero";
+import { ArrowRight, Leaf, Tractor, Sprout } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import FadeIn from "@/components/ui/FadeIn";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="w-full">
+      <ParallaxHero
+        backgroundImage="/images/HomeBG.jpg"
+        containerClass="h-[400px] md:h-[700px] flex flex-col items-center justify-center"
+        overlayClass="bg-black/30"
+      >
+        <FadeIn className="relative z-10 text-start px-4 flex flex-col w-full max-w-[90%]">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-md">
+            Nấm Lim Xanh <br />
+            Trường Lâm
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        </FadeIn>
+      </ParallaxHero>
+
+      {/* Combined Wrapper for About and Vườn dược liệu Sections */}
+      <div className="relative w-full overflow-hidden pb-10">
+        {/* Shared Wavy Background Decor */}
+        <div className="absolute inset-x-0 bottom-0 top-[120px] md:top-[160px] pointer-events-none z-0 flex flex-col opacity-5 text-primary">
+          <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-32 md:h-56 shrink-0">
+            <path fill="currentColor" d="M0,50 C240,100 480,0 720,50 C960,100 1200,0 1440,50 L1440,100 L0,100 Z"></path>
+          </svg>
+          <div className="w-full grow bg-current"></div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* About Section */}
+        <section className="relative w-full pt-20 md:pt-32 pb-10 md:pb-16 px-4 flex justify-center z-10">
+          <div className="w-full max-w-[90%] grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+            {/* Left Column */}
+            <FadeIn direction="right" className="flex flex-col items-start lg:items-center justify-center h-full w-full">
+              <div className="w-full lg:w-fit flex flex-col items-start">
+                <div className="w-fit border border-primary/40 text-primary uppercase tracking-widest text-[11px] font-bold px-4 py-1.5 rounded-full mb-8 bg-background/50 backdrop-blur-sm">
+                  Nấm lim xanh
+                </div>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] tracking-tight">
+                  Giới thiệu <br />
+                  Về Nấm Lim Xanh <br />
+                  Trường Lâm
+                </h2>
+                <button className="flex items-center gap-2 w-fit bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 rounded-full px-8 py-3.5 text-base font-medium shadow-sm hover:shadow-md relative z-20 mt-10">
+                  Khám phá thêm
+                </button>
+              </div>
+            </FadeIn>
+
+            {/* Right Column */}
+            <FadeIn direction="left" delay={0.2} className="flex flex-col items-start lg:pt-16">
+              <p className="text-foreground/80 text-lg md:text-xl leading-relaxed mb-4">
+                Sản phẩm là kết quả của nhiều năm nghiên cứu chuyên sâu trên nền tảng khoa học, nghiên cứu cấp Bộ của Bộ Nông nghiệp và Phát triển nông thôn phát triển nguồn gen nấm lim xanh.
+              </p>
+              <p className="text-foreground/80 text-lg md:text-xl leading-relaxed mb-4">
+                Được nuôi trồng tại Vườn Dược Liệu Hợp Tác Xã Hải Nam, sản phẩm là sự kết hợp hài hòa giữa di sản tri thức về thảo dược truyền thống và công nghệ sinh học hiện đại. Chúng tôi tự hào ứng dụng thành công quy trình nuôi trồng kiểm soát khép kín nghiêm ngặt đạt tiêu chuẩn HACCP, đảm bảo chất lượng vàng ổn định từ giống gốc đến thành phẩm.
+              </p>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium flex items-center gap-2 relative z-20">
+                Sổ Tay Hướng Dẫn Áp Dụng HACCP, GMP & GHP Cho Doanh Nghiệp Thực Phẩm (PDF)
+              </a>
+            </FadeIn>
+          </div>
+        </section>
+
+        {/* Mô hình vườn dược liệu Section */}
+        <section className="relative w-full pt-10 md:pt-40 pb-20 md:pb-32 px-4 flex justify-center z-10">
+          <div className="w-full max-w-[90%] flex flex-col gap-12 lg:gap-16">
+            {/* Title */}
+            <div className="flex flex-col items-center text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+                Mô Hình Trồng Nấm Khép Kín
+              </h2>
+            </div>
+
+            {/* Bento Grid Layout */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-4 w-full lg:h-[600px]">
+              {/* Item 1 - Large Left */}
+              <Link href="#" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group md:col-span-2 lg:col-span-2 lg:row-span-2 min-h-[350px] lg:min-h-0 border-2 border-white/20 bg-black/10">
+                <Image src="/images/BoxGift.jpg" alt="Kỹ thuật Trồng Nấm Khép Kín" fill className="object-cover transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8">
+                  <h3 className="text-white text-2xl md:text-3xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    Kỹ thuật Trồng Nấm Khép Kín
+                  </h3>
+                  <p className="text-white/90 text-sm md:text-base line-clamp-2 md:line-clamp-3 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                    Khám phá quy trình nuôi trồng khép kín nghiêm ngặt đạt chuẩn HACCP từ khâu chuẩn bị phôi đến lúc thu hoạch, đảm bảo giữ nguyên hàm lượng dược chất quý giá.
+                  </p>
+                </div>
+              </Link>
+
+              {/* Item 2 - Middle Top */}
+              <Link href="#" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group lg:col-span-1 lg:row-span-1 min-h-[250px] lg:min-h-0 border-2 border-white/20 bg-black/10">
+                <Image src="/images/BoxGift.jpg" alt="Bảo Tồn Nguồn Gen Quý" fill className="object-cover transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6">
+                  <h3 className="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    Bảo Tồn Gen Quý
+                  </h3>
+                  <p className="text-white/90 text-sm line-clamp-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                    Phục tráng và duy trì nguồn gen nấm lim xanh chuẩn gốc, đóng góp to lớn vào việc bảo tồn đa dạng sinh học.
+                  </p>
+                </div>
+              </Link>
+
+              {/* Item 3 - Middle Bottom */}
+              <Link href="#" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group lg:col-span-1 lg:row-span-1 lg:col-start-3 lg:row-start-2 min-h-[250px] lg:min-h-0 border-2 border-white/20 bg-black/10">
+                <Image src="/images/BoxGift.jpg" alt="Thu Hoạch Hữu Cơ" fill className="object-cover transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6">
+                  <h3 className="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    Thu Hoạch Hữu Cơ
+                  </h3>
+                  <p className="text-white/90 text-sm line-clamp-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                    Từng cây nấm được thu hái thủ công tỉ mỉ vào đúng thời điểm vàng, cam kết không sử dụng hóa chất hay chất kích thích.
+                  </p>
+                </div>
+              </Link>
+
+              {/* Item 4 - Tall Right */}
+              <Link href="#" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group md:col-span-2 lg:col-span-1 lg:row-span-2 lg:col-start-4 lg:row-start-1 min-h-[400px] lg:min-h-0 border-2 border-white/20 bg-black/10">
+                <Image src="/images/BoxGift.jpg" alt="Môi Trường Sinh Thái" fill className="object-cover transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6">
+                  <h3 className="text-white text-xl md:text-2xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    Môi Trường Sinh Thái
+                  </h3>
+                  <p className="text-white/90 text-sm md:text-base line-clamp-3 md:line-clamp-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                    Hợp Tác Xã Hải Nam tạo dựng một môi trường sinh thái mô phỏng hoàn hảo tự nhiên, nơi cây nấm phát triển tự do, đón nắng gió và sương đêm trong lành nhất.
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Nấm và Chế phẩm Section */}
+      <section className="w-full py-15 md:py-22 px-4 bg-white flex flex-col items-center overflow-hidden">
+        <FadeIn className="w-full max-w-[90%] mb-12 flex flex-col items-center text-center">
+          <div className="w-fit border border-primary/40 text-primary uppercase tracking-widest text-[11px] font-bold px-4 py-1.5 rounded-full mb-4 bg-background/50 backdrop-blur-sm">
+            Nấm và Chế phẩm
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            Sản Phẩm Của Chúng Tôi
+          </h2>
+        </FadeIn>
+
+        {/* Filter Tabs */}
+        <FadeIn delay={0.1} className="flex items-center gap-2 md:gap-4 mb-10 overflow-x-auto pb-2 scrollbar-hide max-w-[90%] w-full justify-start md:justify-center">
+          {["Tất cả", "Nấm Nguyên Khúc", "Nấm Thái Lát", "Chế Phẩm Khác"].map((tab, index) => (
+            <button
+              key={index}
+              className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-medium transition-colors border ${index === 0
+                  ? "bg-foreground text-background border-foreground"
+                  : "bg-white text-foreground hover:bg-black/5 border-black/10"
+                }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </FadeIn>
+
+        {/* Product Grid */}
+        <FadeIn delay={0.2} className="w-full max-w-[90%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
+          {[
+            { tag: "Nổi bật", cat: "Nấm Khúc", title: "Nấm Lim Xanh Nguyên Khúc", img: "/images/BoxGift.jpg" },
+            { tag: "Bán chạy", cat: "Thái Lát", title: "Nấm Lim Xanh Thái Lát", img: "/images/BoxGift.jpg" },
+            { tag: "Mới", cat: "Chế Phẩm", title: "Trà Túi Lọc Nấm Lim Xanh", img: "/images/BoxGift.jpg" },
+            { tag: "Cao cấp", cat: "Chế Phẩm", title: "Bào Tử Nấm Lim Xanh", img: "/images/BoxGift.jpg" },
+          ].map((item, index) => (
+            <Link href="#" key={index} className="flex flex-col group">
+              {/* Image Container */}
+              <div className="relative w-full aspect-square bg-[#F7F7F7] rounded-3xl overflow-hidden mb-4 border border-black/5">
+                <div className="absolute top-4 left-4 bg-white text-foreground px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm z-10">
+                  {item.tag}
+                </div>
+                <Image src={item.img} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              </div>
+
+              {/* Text Info */}
+              <div className="flex flex-col px-2">
+                <span className="text-foreground/50 text-xs font-medium uppercase tracking-wider mb-1.5">
+                  {item.cat}
+                </span>
+                <h3 className="text-foreground font-bold text-lg md:text-xl leading-snug group-hover:text-primary transition-colors">
+                  {item.title}
+                </h3>
+              </div>
+            </Link>
+          ))}
+        </FadeIn>
+      </section>
+
+      {/* Lợi Ích Của Nấm Section */}
+      <section className="w-full py-20 md:py-32 px-4 bg-white flex flex-col items-center overflow-hidden">
+        <FadeIn className="w-full max-w-[90%] flex flex-col items-center text-center mb-16 md:mb-24">
+          <div className="w-fit border border-primary/40 text-primary uppercase tracking-widest text-[11px] font-bold px-4 py-1.5 rounded-full mb-4 bg-background/50 backdrop-blur-sm">
+            Công dụng tuyệt vời
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            Công dụng của Nấm Lim Xanh
+          </h2>
+        </FadeIn>
+
+        <div className="w-full max-w-[90%] grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-center">
+          {/* Left Column */}
+          <FadeIn direction="right" className="flex flex-col gap-10 md:gap-16 order-2 lg:order-1">
+            {[
+              { title: "Hỗ trợ điều trị ung thư", desc: "Hoạt chất Triterpenes giúp cô lập và ngăn ngừa sự phát triển của tế bào ung thư." },
+              { title: "Tăng cường hệ miễn dịch", desc: "Kích thích cơ thể sản sinh kháng thể, chống lại vi khuẩn và virus gây bệnh." },
+              { title: "Giải độc & Bảo vệ gan", desc: "Giảm gánh nặng cho gan, hỗ trợ điều trị viêm gan, xơ gan và gan nhiễm mỡ." },
+              { title: "Ổn định huyết áp", desc: "Điều hòa huyết áp, tăng cường tuần hoàn máu và bảo vệ hệ tim mạch." },
+            ].map((item, index) => (
+              <div key={index} className="flex flex-col items-center lg:items-end text-center lg:text-right group cursor-default">
+                <div className="flex flex-col lg:flex-row items-center gap-3 mb-2">
+                  <h3 className="text-xl md:text-2xl font-bold text-primary group-hover:text-primary/80 transition-colors">
+                    {item.title}
+                  </h3>
+                  {/* Decorative wavy line for desktop */}
+                  <svg className="hidden lg:block w-8 h-8 text-primary opacity-30 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 12c-2.66 0-2.66-4-5.33-4-2.66 0-2.66 4-5.33 4-2.66 0-2.66-4-5.33-4-2.66 0-2.66 4-5.33 4z"></path>
+                  </svg>
+                </div>
+                <p className="text-foreground/70 text-sm md:text-base leading-relaxed max-w-sm">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </FadeIn>
+
+          {/* Center Image */}
+          <FadeIn direction="up" delay={0.2} className="relative w-full max-w-[300px] md:max-w-[400px] aspect-square mx-auto order-1 lg:order-2 rounded-full overflow-hidden shadow-2xl border-[8px] border-white z-10 bg-black/5">
+            <Image src="/images/BoxGift.jpg" alt="Lợi ích nấm lim xanh" fill className="object-cover hover:scale-105 transition-transform duration-700" />
+          </FadeIn>
+
+          {/* Right Column */}
+          <FadeIn direction="left" delay={0.4} className="flex flex-col gap-10 md:gap-16 order-3 lg:order-3">
+            {[
+              { title: "Giảm mỡ máu", desc: "Triệt tiêu lượng cholesterol thừa, ngăn ngừa xơ vữa động mạch hiệu quả." },
+              { title: "Kiểm soát đường huyết", desc: "Cân bằng lượng đường trong máu, rất tốt cho bệnh nhân tiểu đường." },
+              { title: "Chống lão hóa", desc: "Chứa nhiều chất chống oxy hóa mạnh giúp làm chậm quá trình lão hóa da và cơ thể." },
+              { title: "Cải thiện giấc ngủ", desc: "Làm dịu hệ thần kinh, giảm căng thẳng mệt mỏi, mang lại giấc ngủ sâu và ngon hơn." },
+            ].map((item, index) => (
+              <div key={index} className="flex flex-col items-center lg:items-start text-center lg:text-left group cursor-default">
+                <div className="flex flex-col lg:flex-row-reverse items-center gap-3 mb-2">
+                  <h3 className="text-xl md:text-2xl font-bold text-primary group-hover:text-primary/80 transition-colors">
+                    {item.title}
+                  </h3>
+                  {/* Decorative wavy line for desktop */}
+                  <svg className="hidden lg:block w-8 h-8 text-primary opacity-30 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M2 12c2.66 0 2.66-4 5.33-4 2.66 0 2.66 4 5.33 4 2.66 0 2.66-4 5.33-4 2.66 0 2.66 4 5.33 4z"></path>
+                  </svg>
+                </div>
+                <p className="text-foreground/70 text-sm md:text-base leading-relaxed max-w-sm">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </FadeIn>
         </div>
-      </main>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="w-full py-20 md:py-32 bg-primary/5 flex flex-col items-center">
+        <div className="w-full max-w-[800px] flex flex-col items-center px-4">
+          <FadeIn className="flex flex-col items-center w-full">
+            <h2 className="text-3xl md:text-5xl font-bold  mb-4 text-center">
+              Câu Hỏi Thường Gặp
+            </h2>
+            <p className="text-foreground/70 text-center mb-12 md:mb-16 text-sm md:text-base">
+              Giải đáp những thắc mắc phổ biến về nấm lim xanh và sản phẩm Trường Lâm.
+            </p>
+          </FadeIn>
+
+          <FadeIn direction="up" delay={0.2} className="w-full flex flex-col gap-2 mb-12">
+            {[
+              {
+                q: "Nấm lim xanh sử dụng thế nào để đạt hiệu quả tốt nhất?",
+                a: "Cách tốt nhất là thái lát nấm lim xanh, sau đó sắc lấy nước uống hằng ngày (khoảng 10-20g nấm với 2 lít nước sắc cạn còn 1.5 lít). Nên uống trước bữa ăn 30 phút. Có thể hãm như trà uống trong ngày.",
+                open: true
+              },
+              {
+                q: "Người bình thường không có bệnh có dùng được không?",
+                a: "Hoàn toàn được. Người bình thường sử dụng nấm lim xanh giúp tăng cường hệ miễn dịch, làm mát gan, giải độc cơ thể, chống lão hóa và ngăn ngừa bệnh tật vô cùng hiệu quả."
+              },
+              {
+                q: "Trường Lâm bảo quản nấm lim xanh như thế nào?",
+                a: "Nấm lim xanh tại Trường Lâm được sấy khô bằng công nghệ hiện đại, đóng gói trong túi chân không và hộp kín để chống ẩm mốc, giữ nguyên vẹn dược tính trong thời gian dài."
+              }
+            ].map((faq, index) => (
+              <details key={index} className="group border-b border-black/10 pb-2" open={faq.open}>
+                <summary className="flex justify-between items-center font-medium cursor-pointer list-none [&::-webkit-details-marker]:hidden py-4 text-lg md:text-xl text-foreground hover:text-primary transition-colors">
+                  <span className="pr-4">{faq.q}</span>
+                  <span className="relative h-6 w-6 shrink-0 text-primary">
+                    {/* Plus Icon (shown when closed) */}
+                    <svg className="absolute inset-0 h-6 w-6 opacity-100 group-open:opacity-0 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" /></svg>
+                    {/* Minus Icon (shown when open) */}
+                    <svg className="absolute inset-0 h-6 w-6 opacity-0 group-open:opacity-100 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M20 12H4" /></svg>
+                  </span>
+                </summary>
+                <div className="text-foreground/70 pb-6 leading-relaxed text-sm md:text-base mt-2">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </FadeIn>
+
+          <FadeIn direction="up" delay={0.4}>
+            <button className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground uppercase tracking-widest text-sm font-bold px-8 py-3.5 rounded-md transition-colors duration-300 shadow-sm">
+              Xem thêm câu hỏi thường gặp
+            </button>
+          </FadeIn>
+        </div>
+      </section>
+
     </div>
   );
 }
