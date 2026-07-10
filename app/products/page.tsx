@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import ParallaxHero from "@/components/ui/ParallaxHero";
 import FadeIn from "@/components/ui/FadeIn";
 import Image from "next/image";
@@ -16,9 +17,23 @@ const categories = [
   { id: "phoi-nam-lim-xanh", label: "Phôi nấm lim xanh chất lượng cao", icon: Package },
 ];
 
-export default function ProductsPage() {
+function ProductsContent() {
   const allProducts = productsData.products;
-  const [activeCategory, setActiveCategory] = useState("all");
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+  
+  const activeCategory = searchParams.get("category") || "all";
+
+  const setActiveCategory = (id: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (id === "all") {
+      params.delete("category");
+    } else {
+      params.set("category", id);
+    }
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+  };
 
   const activeCategoryLabel = categories.find(c => c.id === activeCategory)?.label || "Tất Cả Sản Phẩm";
 
@@ -165,5 +180,13 @@ export default function ProductsPage() {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#FAFAFA]" />}>
+      <ProductsContent />
+    </Suspense>
   );
 }

@@ -35,8 +35,8 @@ export default function Header() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-foreground tracking-tight leading-none">Nấm Lim Xanh</span>
-              <span className="text-sm font-bold text-[#D4A373] leading-none mt-1 uppercase tracking-widest">Trường Lâm</span>
+              <span className="text-xl font-bold text-[#27a056] tracking-tight leading-none">Nấm Lim Xanh</span>
+              <span className="text-sm font-bold text-[#80232f] leading-none mt-1 uppercase tracking-widest">Trường Lâm</span>
             </div>
           </Link>
 
@@ -48,9 +48,8 @@ export default function Header() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-base font-bold transition-colors ${
-                    isActive ? "text-[#D4A373]" : "text-foreground/80 hover:text-[#D4A373]"
-                  }`}
+                  className={`text-base font-bold transition-colors ${isActive ? "text-[#D4A373]" : "text-foreground/80 hover:text-[#D4A373]"
+                    }`}
                 >
                   {link.name}
                 </Link>

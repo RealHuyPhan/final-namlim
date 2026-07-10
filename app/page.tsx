@@ -139,10 +139,10 @@ export default function Home() {
                 <Image src="/images/BoxGift.jpg" alt="Kỹ thuật Trồng Nấm Khép Kín" fill className="object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8">
                   <h3 className="text-white text-2xl md:text-3xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    Kỹ thuật Trồng Nấm Khép Kín
+                    Quy trình sản xuất nấm khép kín
                   </h3>
                   <p className="text-white/90 text-sm md:text-base line-clamp-2 md:line-clamp-3 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                    Khám phá quy trình nuôi trồng khép kín nghiêm ngặt đạt chuẩn HACCP từ khâu chuẩn bị phôi đến lúc thu hoạch, đảm bảo giữ nguyên hàm lượng dược chất quý giá.
+                    Từ phôi giống đến thành phẩm: Khám phá quy trình nuôi trồng nghiêm ngặt đạt chuẩn HACCP, đảm bảo giữ nguyên hàm lượng dược chất quý giá.
                   </p>
                 </div>
               </Link>
@@ -152,10 +152,10 @@ export default function Home() {
                 <Image src="/images/BoxGift.jpg" alt="Bảo Tồn Nguồn Gen Quý" fill className="object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6">
                   <h3 className="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    Bảo Tồn Gen Quý
+                    Nấm nuôi trồng & tự nhiên
                   </h3>
                   <p className="text-white/90 text-sm line-clamp-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                    Phục tráng và duy trì nguồn gen nấm lim xanh chuẩn gốc, đóng góp to lớn vào việc bảo tồn đa dạng sinh học.
+                    Khác nhau như thế nào? Tìm hiểu sự khác biệt về dược tính, hình thái và môi trường phát triển của hai loại nấm.
                   </p>
                 </div>
               </Link>
@@ -165,10 +165,10 @@ export default function Home() {
                 <Image src="/images/BoxGift.jpg" alt="Thu Hoạch Hữu Cơ" fill className="object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6">
                   <h3 className="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    Thu Hoạch Hữu Cơ
+                    Sấy lạnh hay sấy nhiệt?
                   </h3>
                   <p className="text-white/90 text-sm line-clamp-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                    Từng cây nấm được thu hái thủ công tỉ mỉ vào đúng thời điểm vàng, cam kết không sử dụng hóa chất hay chất kích thích.
+                    Phương pháp nào bảo toàn dược chất tốt hơn? Phân tích công nghệ chế biến sau thu hoạch giúp giữ lại tối đa dưỡng chất.
                   </p>
                 </div>
               </Link>
@@ -178,10 +178,10 @@ export default function Home() {
                 <Image src="/images/BoxGift.jpg" alt="Môi Trường Sinh Thái" fill className="object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6">
                   <h3 className="text-white text-xl md:text-2xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    Môi Trường Sinh Thái
+                    &quot;Quốc bảo dược liệu&quot; Việt Nam
                   </h3>
                   <p className="text-white/90 text-sm md:text-base line-clamp-3 md:line-clamp-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                    Hợp Tác Xã Hải Nam tạo dựng một môi trường sinh thái mô phỏng hoàn hảo tự nhiên, nơi cây nấm phát triển tự do, đón nắng gió và sương đêm trong lành nhất.
+                    Tại sao nấm lim xanh xứng đáng trở thành &quot;quốc bảo dược liệu&quot;? Khám phá giá trị y học to lớn và hành trình đưa nấm lim xanh Việt Nam vươn tầm quốc tế.
                   </p>
                 </div>
               </Link>

@@ -1,6 +1,12 @@
 "use client";
 
 import { ReactLenis } from 'lenis/react';
+import { useScrollRestoration } from '@/hooks/useScrollRestoration';
+
+function ScrollRestorationHandler({ children }: { children: React.ReactNode }) {
+  useScrollRestoration();
+  return <>{children}</>;
+}
 
 export default function SmoothScroll({
   children,
@@ -9,7 +15,9 @@ export default function SmoothScroll({
 }) {
   return (
     <ReactLenis root options={{ duration: 1.2, wheelMultiplier: 1 }}>
-      {children}
+      <ScrollRestorationHandler>
+        {children}
+      </ScrollRestorationHandler>
     </ReactLenis>
   );
 }

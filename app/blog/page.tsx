@@ -1,9 +1,24 @@
+import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/ui/FadeIn";
+import CategoryFilter from "@/components/blog/CategoryFilter";
+import { BLOG_POSTS } from "@/data/blog";
 import { ArrowRight, FlaskConical, BookOpen, Quote, Calendar, Tag } from "lucide-react";
+import { contentfulClient } from "../lib/contentful";
 
-export default function BlogPage() {
+export default async function BlogPage(props: { searchParams?: Promise<{ [key: string]: string | string[] | undefined }> }) {
+  const searchParams = await props.searchParams;
+  const activeCategory = (searchParams?.category as string) || "all";
+
+  const filteredPosts = activeCategory === "all" 
+    ? BLOG_POSTS 
+    : BLOG_POSTS.filter(post => post.category === activeCategory);
+
+  const response = await contentfulClient.getEntries({
+    content_type: 'blogPost',
+  });
+  console.log(response, '???')
   return (
     <div className="w-full bg-[#FAFAFA] pt-32 pb-20 md:pt-40 md:pb-24">
       <div className="w-full max-w-[95%] 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,11 +41,11 @@ export default function BlogPage() {
 
           {/* Right Image */}
           <FadeIn direction="left" delay={0.2} className="relative w-full h-[350px] md:h-[450px] lg:h-[500px] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-black/5">
-            <Image 
-              src="/images/BoxGift.jpg" 
-              alt="Mô hình trồng nấm lim xanh" 
-              fill 
-              className="object-cover" 
+            <Image
+              src="/images/BoxGift.jpg"
+              alt="Mô hình trồng nấm lim xanh"
+              fill
+              className="object-cover"
             />
           </FadeIn>
         </div>
@@ -39,7 +54,7 @@ export default function BlogPage() {
       {/* Featured Categories */}
       <section className="w-full bg-[#FAFAFA] pb-24 mt-16 md:mt-24">
         <div className="w-full max-w-[95%] 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Section Title */}
           <FadeIn className="flex items-center gap-4 mb-10">
             <div className="w-1.5 h-8 bg-[#5C3A21] rounded-full"></div>
@@ -48,7 +63,7 @@ export default function BlogPage() {
 
           {/* Grid Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-            
+
             {/* Card 1: Nghiên cứu (Col-Span-2) */}
             <FadeIn direction="up" delay={0.1} className="lg:col-span-2 flex flex-col md:flex-row bg-[#F8F3ED] rounded-[24px] overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-shadow">
               <div className="w-full md:w-[45%] h-[250px] md:h-auto relative overflow-hidden">
@@ -110,7 +125,7 @@ export default function BlogPage() {
             <FadeIn direction="up" delay={0.4} className="lg:col-span-2 relative rounded-[24px] overflow-hidden group cursor-pointer min-h-[320px] flex flex-col justify-end p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow">
               <Image src="/images/BoxGift.jpg" alt="Từ thực phẩm sạch" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-              
+
               <div className="relative z-10 w-full max-w-2xl">
                 <Quote className="w-12 h-12 text-white/30 mb-4 fill-current stroke-0 rotate-180" />
                 <h3 className="text-3xl md:text-[34px] font-bold text-white leading-[1.2] mb-4">
@@ -130,83 +145,63 @@ export default function BlogPage() {
       <section className="w-full bg-white py-16 md:py-24">
         <div className="w-full max-w-[95%] 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
-            
+
             {/* Left Content - Latest Articles */}
             <div className="flex-1">
-              <FadeIn className="flex items-center gap-3 mb-10 border-b border-[#EBE0D3] pb-4">
+              <FadeIn className="flex items-center gap-3 mb-6 border-b border-[#EBE0D3] pb-4">
                 <div className="w-1.5 h-6 bg-[#5C3A21] rounded-full"></div>
                 <h2 className="text-2xl md:text-3xl font-bold text-[#3E1C16]">Bài viết mới nhất</h2>
               </FadeIn>
 
-              <div className="flex flex-col gap-10">
-                {/* Article 1 */}
-                <FadeIn direction="up" className="flex flex-col md:flex-row gap-6 md:gap-8 group">
-                  <div className="w-full md:w-[280px] lg:w-[320px] shrink-0">
-                    <Link href="#" className="block relative h-[200px] md:h-[220px] rounded-2xl overflow-hidden">
-                      <Image 
-                        src="/images/BoxGift.jpg" 
-                        alt="Sinh cảnh tự nhiên" 
-                        fill 
-                        className="object-cover group-hover:scale-105 transition-transform duration-700" 
-                      />
-                    </Link>
-                  </div>
-                  <div className="flex flex-col flex-1">
-                    <div className="flex items-center gap-2 text-sm text-[#8B6E53] font-medium mb-3">
-                      <Calendar className="w-4 h-4" />
-                      <span>08 Tháng 6, 2026</span>
-                      <span className="mx-1">•</span>
-                      <span>Nghiên Cứu</span>
-                    </div>
-                    <Link href="#">
-                      <h3 className="text-xl md:text-2xl font-bold text-[#C67C4E] hover:text-[#A66336] leading-[1.4] mb-3 transition-colors">
-                        Sinh cảnh tự nhiên: Chìa khóa tạo nên dược tính vượt trội của Nấm Lim Xanh
-                      </h3>
-                    </Link>
-                    <p className="text-foreground/70 text-sm md:text-base leading-relaxed mb-4 line-clamp-3">
-                      Tại sao nấm lim xanh Trường Lâm được nuôi cấy trong mô hình sinh cảnh mô phỏng tự nhiên lại sở hữu hàm lượng hoạt chất quý tương đương nấm rừng?
-                    </p>
-                    <div className="flex flex-wrap items-center gap-2 mt-auto">
-                      <span className="text-[11px] text-[#8B6E53] font-medium px-3 py-1 bg-[#F8F3ED] rounded-full">#namlimxanh</span>
-                      <span className="text-[11px] text-[#8B6E53] font-medium px-3 py-1 bg-[#F8F3ED] rounded-full">#sinhcanh</span>
-                      <span className="text-[11px] text-[#8B6E53] font-medium px-3 py-1 bg-[#F8F3ED] rounded-full">#duoclieuquy</span>
-                    </div>
-                  </div>
-                </FadeIn>
+              {/* Horizontal Category Filter */}
+              <Suspense fallback={<div className="h-12 w-full animate-pulse bg-gray-100 rounded-full mb-8"></div>}>
+                <CategoryFilter />
+              </Suspense>
 
-                {/* Article 2 */}
-                <FadeIn direction="up" delay={0.1} className="flex flex-col md:flex-row gap-6 md:gap-8 group">
-                  <div className="w-full md:w-[280px] lg:w-[320px] shrink-0">
-                    <Link href="#" className="block relative h-[200px] md:h-[220px] rounded-2xl overflow-hidden">
-                      <Image 
-                        src="/images/HomeBG.jpg" 
-                        alt="Lộ trình 30 ngày giải độc gan" 
-                        fill 
-                        className="object-cover group-hover:scale-105 transition-transform duration-700" 
-                      />
-                    </Link>
+              <div className="flex flex-col gap-10">
+                {filteredPosts.length > 0 ? (
+                  filteredPosts.map((post, index) => (
+                    <FadeIn key={post.id} direction="up" delay={index * 0.1} className="flex flex-col md:flex-row gap-6 md:gap-8 group">
+                      <div className="w-full md:w-[280px] lg:w-[320px] shrink-0">
+                        <Link href={`/blog/${post.id}`} className="block relative h-[200px] md:h-[220px] rounded-2xl overflow-hidden">
+                          <Image
+                            src={post.image}
+                            alt={post.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                          />
+                        </Link>
+                      </div>
+                      <div className="flex flex-col flex-1">
+                        <div className="flex items-center gap-2 text-sm text-[#8B6E53] font-medium mb-3">
+                          <Calendar className="w-4 h-4" />
+                          <span>{post.date}</span>
+                          <span className="mx-1">•</span>
+                          <span className="capitalize">{post.category.replace(/-/g, ' ')}</span>
+                        </div>
+                        <Link href={`/blog/${post.id}`}>
+                          <h3 className="text-xl md:text-2xl font-bold text-[#3E1C16] hover:text-[#C67C4E] leading-[1.4] mb-3 transition-colors">
+                            {post.title}
+                          </h3>
+                        </Link>
+                        <p className="text-foreground/70 text-sm md:text-base leading-relaxed mb-4 line-clamp-3">
+                          {post.excerpt}
+                        </p>
+                        <div className="flex flex-wrap items-center gap-2 mt-auto">
+                          {post.tags.map(tag => (
+                            <span key={tag} className="text-[11px] text-[#8B6E53] font-medium px-3 py-1 bg-[#F8F3ED] rounded-full">
+                              #{tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </FadeIn>
+                  ))
+                ) : (
+                  <div className="text-center py-10 text-[#5C3A21]">
+                    Chưa có bài viết nào trong danh mục này.
                   </div>
-                  <div className="flex flex-col flex-1">
-                    <div className="flex items-center gap-2 text-sm text-[#8B6E53] font-medium mb-3">
-                      <Calendar className="w-4 h-4" />
-                      <span>01 Tháng 6, 2026</span>
-                      <span className="mx-1">•</span>
-                      <span>Cẩm Nang</span>
-                    </div>
-                    <Link href="#">
-                      <h3 className="text-xl md:text-2xl font-bold text-[#3E1C16] hover:text-[#C67C4E] leading-[1.4] mb-3 transition-colors">
-                        Lộ trình 30 ngày giải độc gan, thanh lọc cơ thể toàn diện cùng trà nấm
-                      </h3>
-                    </Link>
-                    <p className="text-foreground/70 text-sm md:text-base leading-relaxed mb-4 line-clamp-3">
-                      Hướng dẫn chi tiết lộ trình sử dụng nước sắc nấm lim xanh kết hợp chế độ ăn uống khoa học giúp phục hồi và tối ưu chức năng gan chỉ sau 4 tuần.
-                    </p>
-                    <div className="flex flex-wrap items-center gap-2 mt-auto">
-                      <span className="text-[11px] text-[#8B6E53] font-medium px-3 py-1 bg-[#F8F3ED] rounded-full">#suckhoe</span>
-                      <span className="text-[11px] text-[#8B6E53] font-medium px-3 py-1 bg-[#F8F3ED] rounded-full">#giaidocgan</span>
-                    </div>
-                  </div>
-                </FadeIn>
+                )}
               </div>
 
               {/* View More Button */}
@@ -224,14 +219,14 @@ export default function BlogPage() {
                   <Tag className="w-5 h-5 text-[#5C3A21] rotate-90" />
                   <h3 className="text-xl font-bold text-[#3E1C16]">Chủ đề phổ biến</h3>
                 </div>
-                
+
                 <div className="flex flex-wrap gap-3">
                   {[
-                    "namlimxanh", "khoahoc", "duoclieuquy", 
+                    "namlimxanh", "khoahoc", "duoclieuquy",
                     "sinhcanh", "suckhoe", "giaidocgan", "chuanhaccp"
                   ].map((tag) => (
-                    <Link 
-                      key={tag} 
+                    <Link
+                      key={tag}
                       href={`#${tag}`}
                       className="bg-white text-[#5C3A21] text-xs font-medium px-4 py-2.5 rounded-full hover:bg-[#C67C4E] hover:text-white transition-colors border border-transparent hover:border-[#C67C4E] shadow-sm"
                     >
@@ -241,7 +236,7 @@ export default function BlogPage() {
                 </div>
               </FadeIn>
             </div>
-            
+
           </div>
         </div>
       </section>

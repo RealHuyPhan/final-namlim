@@ -46,27 +46,27 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
 
       {/* Main Content */}
       <div className="w-full max-w-[95%] 2xl:max-w-[1440px] flex flex-col lg:flex-row gap-10 lg:gap-16 py-10 md:py-16 px-4">
-        
+
         {/* Left Column - Image */}
         <div className="w-full lg:w-1/2 flex flex-col gap-4">
           <div className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square rounded-[32px] overflow-hidden shadow-2xl bg-black/5 border-4 border-white">
             <div className="absolute top-6 left-6 bg-[#3E1C16] text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider shadow-md z-10">
               {product.tag}
             </div>
-            <Image 
-              src={mainImage} 
-              alt={product.title} 
-              fill 
-              className="object-cover" 
+            <Image
+              src={mainImage}
+              alt={product.title}
+              fill
+              className="object-cover"
             />
           </div>
-          
+
           {/* Thumbnails */}
           <div className="grid grid-cols-4 gap-3 md:gap-4">
             {gallery.map((img, idx) => {
               const isActive = mainImage === img;
               return (
-                <button 
+                <button
                   key={idx}
                   onClick={() => setMainImage(img)}
                   className={`relative aspect-square rounded-2xl overflow-hidden border-2 transition-all duration-300 ${isActive ? "border-[#D4A373] shadow-md opacity-100" : "border-transparent opacity-60 hover:opacity-100"}`}
@@ -104,21 +104,21 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
 
           {/* Tabs */}
           <div className="flex flex-wrap gap-6 md:gap-10 border-b border-black/10 mb-8">
-            <button 
+            <button
               onClick={() => setActiveTab("loi-ich")}
               className={`pb-4 text-sm font-bold tracking-widest uppercase flex items-center gap-2 transition-colors relative ${activeTab === "loi-ich" ? "text-[#3E1C16]" : "text-foreground/40 hover:text-[#3E1C16]/70"}`}
             >
               <Heart className="w-4 h-4" /> LỢI ÍCH NỔI BẬT
               {activeTab === "loi-ich" && <div className="absolute bottom-0 left-0 w-full h-0.5 bg-[#3E1C16]"></div>}
             </button>
-            <button 
+            <button
               onClick={() => setActiveTab("huong-dan")}
               className={`pb-4 text-sm font-bold tracking-widest uppercase flex items-center gap-2 transition-colors relative ${activeTab === "huong-dan" ? "text-[#3E1C16]" : "text-foreground/40 hover:text-[#3E1C16]/70"}`}
             >
               <Activity className="w-4 h-4" /> HƯỚNG DẪN SỬ DỤNG
               {activeTab === "huong-dan" && <div className="absolute bottom-0 left-0 w-full h-0.5 bg-[#3E1C16]"></div>}
             </button>
-            <button 
+            <button
               onClick={() => setActiveTab("thong-so")}
               className={`pb-4 text-sm font-bold tracking-widest uppercase flex items-center gap-2 transition-colors relative ${activeTab === "thong-so" ? "text-[#3E1C16]" : "text-foreground/40 hover:text-[#3E1C16]/70"}`}
             >
@@ -157,7 +157,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                 </li>
               </ul>
             )}
-            
+
             {activeTab === "huong-dan" && (
               <div className="text-foreground/70 leading-relaxed text-sm md:text-base">
                 <p className="mb-4"><strong className="text-[#3E1C16]">Cách dùng:</strong> Thái lát mỏng khoảng 10-20g nấm lim xanh, đun sôi với 2 lít nước trong khoảng 30 phút, để nguội và uống thay nước lọc hằng ngày.</p>
@@ -198,7 +198,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
       </div>
 
       {/* Related Products Section */}
-      <div className="w-full max-w-[95%] 2xl:max-w-[1440px] px-4 py-16 mt-8 border-t border-black/5 flex flex-col">
+      <div className="w-full max-w-[95%] 2xl:max-w-[1440px] px-4 mt-8 flex flex-col">
         <div className="mb-10">
           <span className="text-[#D4A373] text-xs font-bold uppercase tracking-widest mb-2 block">
             BỘ SƯU TẬP KHÁC
@@ -209,7 +209,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
           {otherProducts.map((item, index) => {
             const shortCat = item.category.split(" ").slice(-2).join(" ");
-            
+
             return (
               <Link href={`/products/${item.id}`} key={index} className="flex flex-col group cursor-pointer h-full bg-white p-5 md:p-6 rounded-[32px] shadow-sm border border-black/5 hover:shadow-lg transition-all duration-300">
                 {/* Image Container */}
@@ -228,7 +228,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                   <p className="text-foreground/50 text-xs md:text-sm leading-relaxed mb-6 line-clamp-2">
                     {item.description}
                   </p>
-                  
+
                   {/* Footer / Meta */}
                   <div className="mt-auto flex items-center justify-between pt-2">
                     <span className="text-[#D4A373] text-[10px] font-bold uppercase tracking-widest">

@@ -43,8 +43,8 @@ export default function AboutPage() {
         <div className="w-full max-w-[95%] 2xl:max-w-[1440px] grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
           {/* Left Column - Image */}
-          <FadeIn direction="right" className="lg:col-span-5 relative w-full aspect-[4/5] lg:aspect-[3/4] rounded-[32px] overflow-hidden shadow-2xl border-8 border-white bg-black/5">
-            <Image src="/images/HomeBG.jpg" alt="CEO Lê Văn Hợp" fill className="object-cover" />
+          <FadeIn direction="right" className="lg:col-span-5 mx-auto max-w-md lg:max-w-full relative w-full aspect-[4/5] lg:aspect-[3/4] rounded-[32px] overflow-hidden shadow-2xl border-8 border-white bg-black/5">
+            <Image src="/images/CEO.jpg" alt="CEO Lê Văn Hợp" fill className="object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             <div className="absolute bottom-8 left-8">
               <p className="text-white font-bold text-3xl drop-shadow-md mb-1">Ông Lê Văn Hợp</p>
@@ -312,16 +312,16 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
             {[1, 2, 3].map((item, index) => (
               <FadeIn key={index} delay={index * 0.15} direction="up" className="w-full">
-                <div 
+                <div
                   className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group border border-black/5 bg-white p-4 cursor-pointer"
                   onClick={() => setSelectedCert('/images/CamKet.webp')}
                 >
                   <div className="relative w-full h-full rounded-xl overflow-hidden bg-[#FAFAFA]">
-                    <Image 
-                      src="/images/CamKet.webp" 
-                      alt={`Giấy phép ${item}`} 
-                      fill 
-                      className="object-contain group-hover:scale-105 transition-transform duration-700" 
+                    <Image
+                      src="/images/CamKet.webp"
+                      alt={`Giấy phép ${item}`}
+                      fill
+                      className="object-contain group-hover:scale-105 transition-transform duration-700"
                     />
                     {/* Hover overlay with zoom icon */}
                     <div className="absolute inset-0 bg-[#3E1C16]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -347,7 +347,7 @@ export default function AboutPage() {
             className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-10 bg-black/90 backdrop-blur-sm"
             onClick={() => setSelectedCert(null)}
           >
-            <button 
+            <button
               className="absolute top-6 right-6 md:top-10 md:right-10 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors border border-white/20 z-50 group"
               onClick={() => setSelectedCert(null)}
             >
@@ -361,11 +361,11 @@ export default function AboutPage() {
               className="relative w-full max-w-4xl h-full rounded-2xl overflow-hidden bg-transparent"
               onClick={(e) => e.stopPropagation()}
             >
-              <Image 
-                src={selectedCert} 
-                alt="Certificate Detail" 
-                fill 
-                className="object-contain" 
+              <Image
+                src={selectedCert}
+                alt="Certificate Detail"
+                fill
+                className="object-contain"
               />
             </motion.div>
           </motion.div>
