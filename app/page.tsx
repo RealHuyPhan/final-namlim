@@ -364,9 +364,9 @@ export default function Home() {
           </FadeIn>
 
           <FadeIn direction="up" delay={0.4}>
-            <button className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground uppercase tracking-widest text-sm font-bold px-8 py-3.5 rounded-md transition-colors duration-300 shadow-sm">
-              Xem thêm câu hỏi thường gặp
-            </button>
+            <Link href="/faq" className="inline-block border border-primary text-primary hover:bg-primary hover:text-primary-foreground uppercase tracking-widest text-sm font-bold px-8 py-3.5 rounded-md transition-colors duration-300 shadow-sm">
+              Xem thêm các câu hỏi thường gặp
+            </Link>
           </FadeIn>
         </div>
       </section>

@@ -1,5 +1,41 @@
 export const BLOG_POSTS = [
   {
+    id: "phuc-trang-nguon-gen",
+    title: "Nghiên cứu khoa học: Phục tráng và phát triển nguồn gen nấm Lim xanh bản địa",
+    category: "nghien-cuu",
+    image: "/images/HomeBG.jpg",
+    date: "12 Tháng 7, 2026",
+    excerpt: "Đề tài khoa học cấp Bộ do Đại học Lâm nghiệp chủ trì phối hợp với HTX Hải Nam nghiên cứu phục tráng và phát triển nguồn gen nấm quý hiếm.",
+    tags: ["namlimxanh", "khoahoc"]
+  },
+  {
+    id: "tap-chi-y-hoc-triterpenoids",
+    title: "Tạp chí Y Học: Nghiên cứu lâm sàng về hoạt chất Triterpenoids trong nấm lim xanh",
+    category: "nghien-cuu",
+    image: "/images/BoxGift.jpg",
+    date: "10 Tháng 7, 2026",
+    excerpt: "Báo cáo khoa học tổng hợp cơ chế tác động của hoạt chất Triterpenoids giúp ngăn ngừa và ức chế các tế bào gốc tự do, tăng sinh tế bào lành tính.",
+    tags: ["namlimxanh", "khoahoc"]
+  },
+  {
+    id: "phan-biet-nam-lim-xanh",
+    title: "Báo Sức Khỏe Đời Sống: Cách phân biệt nấm lim xanh rừng và nấm nuôi trồng",
+    category: "bao-chi",
+    image: "/images/HomeBG.jpg",
+    date: "08 Tháng 7, 2026",
+    excerpt: "Lời khuyên từ các bác sĩ Đông Y đầu ngành trong việc lựa chọn nấm lim xanh chuẩn chất lượng, tránh mua phải hàng giả, hàng kém chất lượng.",
+    tags: ["namlimxanh", "duoclieuquy"]
+  },
+  {
+    id: "tu-thuc-pham-sach-den-sieu-thuc-pham",
+    title: "Từ thực phẩm sạch đến siêu thực phẩm",
+    category: "bao-chi",
+    image: "/images/BoxGift.jpg",
+    date: "05 Tháng 7, 2026",
+    excerpt: "Thị trường nấm ăn toàn cầu đang chứng kiến mức tăng trưởng mạnh mẽ, nhờ xu hướng tiêu dùng mới: ăn sạch – bổ dưỡng – phòng bệnh tự nhiên.",
+    tags: ["namlimxanh", "suckhoe"]
+  },
+  {
     id: "nam-lim-xanh-la-gi",
     title: "Nấm lim xanh là gì? Phân biệt với nấm linh chi thường",
     category: "gioi-thieu",

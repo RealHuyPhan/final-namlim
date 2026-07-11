@@ -32,7 +32,7 @@ export default function AboutPage() {
             </h1>
 
             <p className="text-white/90 text-sm md:text-base lg:text-lg leading-relaxed drop-shadow-md max-w-xl">
-              Hành trình mang tinh hoa Nấm Lim Xanh từ đại ngàn đến với sức khỏe cộng đồng.
+              Hành trình mang tinh hoa Nấm Lim Xanh đến với sức khỏe của cộng đồng.
             </p>
           </FadeIn>
         </div>
