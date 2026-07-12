@@ -54,12 +54,12 @@ export default function Home() {
             <FadeIn direction="right" className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] flex items-center justify-center mt-10 lg:mt-0">
               {/* Main Large Image */}
               <div className="absolute top-0 right-4 sm:right-10 md:right-20 w-[75%] sm:w-[70%] h-[80%] rounded-[32px] overflow-hidden shadow-2xl border-4 border-white bg-black/5">
-                <Image src="/images/BoxGift.jpg" alt="Vườn dược liệu Nấm Lim Xanh" fill className="object-cover" />
+                <Image src="/images/BoxGift.jpg" alt="Vườn dược liệu Nấm Lim Xanh" fill sizes="100vw" className="object-cover" />
               </div>
 
               {/* Secondary Overlapping Image */}
               <div className="absolute bottom-0 left-0 w-[60%] sm:w-[55%] h-[55%] rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-4 border-white bg-black/5 z-10">
-                <Image src="/images/HomeBG.jpg" alt="Thu hoạch Nấm Lim Xanh" fill className="object-cover" />
+                <Image src="/images/HomeBG.jpg" alt="Thu hoạch Nấm Lim Xanh" fill sizes="100vw" className="object-cover" />
               </div>
 
               {/* Floating Badge */}
@@ -135,8 +135,8 @@ export default function Home() {
             {/* Bento Grid Layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-4 w-full lg:h-[480px]">
               {/* Item 1 - Large Left */}
-              <Link href="#" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group md:col-span-2 lg:col-span-2 lg:row-span-2 min-h-[350px] lg:min-h-0 border-2 border-white/20 bg-black/10">
-                <Image src="/images/BoxGift.jpg" alt="Kỹ thuật Trồng Nấm Khép Kín" fill className="object-cover transition-transform duration-500" />
+              <Link href="/blog/quy-trinh-san-xuat-khep-kin" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group md:col-span-2 lg:col-span-2 lg:row-span-2 min-h-[350px] lg:min-h-0 border-2 border-white/20 bg-black/10">
+                <Image src="/images/BoxGift.jpg" alt="Kỹ thuật Trồng Nấm Khép Kín" fill sizes="100vw" className="object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8">
                   <h3 className="text-white text-2xl md:text-3xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     Quy trình sản xuất nấm khép kín
@@ -148,8 +148,8 @@ export default function Home() {
               </Link>
 
               {/* Item 2 - Middle Top */}
-              <Link href="#" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group lg:col-span-1 lg:row-span-1 min-h-[250px] lg:min-h-0 border-2 border-white/20 bg-black/10">
-                <Image src="/images/BoxGift.jpg" alt="Bảo Tồn Nguồn Gen Quý" fill className="object-cover transition-transform duration-500" />
+              <Link href="/blog/nam-nuoi-trong-va-tu-nhien" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group lg:col-span-1 lg:row-span-1 min-h-[250px] lg:min-h-0 border-2 border-white/20 bg-black/10">
+                <Image src="/images/BoxGift.jpg" alt="Bảo Tồn Nguồn Gen Quý" fill sizes="100vw" className="object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6">
                   <h3 className="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     Nấm nuôi trồng & tự nhiên
@@ -161,8 +161,8 @@ export default function Home() {
               </Link>
 
               {/* Item 3 - Middle Bottom */}
-              <Link href="#" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group lg:col-span-1 lg:row-span-1 lg:col-start-3 lg:row-start-2 min-h-[250px] lg:min-h-0 border-2 border-white/20 bg-black/10">
-                <Image src="/images/BoxGift.jpg" alt="Thu Hoạch Hữu Cơ" fill className="object-cover transition-transform duration-500" />
+              <Link href="/blog/say-lanh-va-say-nhiet" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group lg:col-span-1 lg:row-span-1 lg:col-start-3 lg:row-start-2 min-h-[250px] lg:min-h-0 border-2 border-white/20 bg-black/10">
+                <Image src="/images/BoxGift.jpg" alt="Thu Hoạch Hữu Cơ" fill sizes="100vw" className="object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6">
                   <h3 className="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     Sấy lạnh hay sấy nhiệt?
@@ -174,8 +174,8 @@ export default function Home() {
               </Link>
 
               {/* Item 4 - Tall Right */}
-              <Link href="#" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group md:col-span-2 lg:col-span-1 lg:row-span-2 lg:col-start-4 lg:row-start-1 min-h-[400px] lg:min-h-0 border-2 border-white/20 bg-black/10">
-                <Image src="/images/BoxGift.jpg" alt="Môi Trường Sinh Thái" fill className="object-cover transition-transform duration-500" />
+              <Link href="/blog/quoc-bao-duoc-lieu" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group md:col-span-2 lg:col-span-1 lg:row-span-2 lg:col-start-4 lg:row-start-1 min-h-[400px] lg:min-h-0 border-2 border-white/20 bg-black/10">
+                <Image src="/images/BoxGift.jpg" alt="Môi Trường Sinh Thái" fill sizes="100vw" className="object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6">
                   <h3 className="text-white text-xl md:text-2xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     &quot;Quốc bảo dược liệu&quot; Việt Nam
@@ -209,27 +209,30 @@ export default function Home() {
               { title: "Tăng cường hệ miễn dịch", desc: "Kích thích cơ thể sản sinh kháng thể, chống lại vi khuẩn và virus gây bệnh." },
               { title: "Giải độc & Bảo vệ gan", desc: "Giảm gánh nặng cho gan, hỗ trợ điều trị viêm gan, xơ gan và gan nhiễm mỡ." },
               { title: "Ổn định huyết áp", desc: "Điều hòa huyết áp, tăng cường tuần hoàn máu và bảo vệ hệ tim mạch." },
-            ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center lg:items-end text-center lg:text-right group cursor-default">
-                <div className="flex flex-col lg:flex-row items-center gap-3 mb-2">
-                  <h3 className="text-xl md:text-2xl font-bold text-primary group-hover:text-primary/80 transition-colors">
-                    {item.title}
-                  </h3>
-                  {/* Decorative wavy line for desktop */}
-                  <svg className="hidden lg:block w-8 h-8 text-primary opacity-30 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 12c-2.66 0-2.66-4-5.33-4-2.66 0-2.66 4-5.33 4-2.66 0-2.66-4-5.33-4-2.66 0-2.66 4-5.33 4z"></path>
-                  </svg>
+            ].map((item, index) => {
+              const translateClass = index === 0 || index === 3 ? "lg:translate-x-8" : "lg:-translate-x-4";
+              return (
+                <div key={index} className={`flex flex-col items-center lg:items-end text-center lg:text-right group cursor-default transition-transform duration-500 hover:scale-105 ${translateClass}`}>
+                  <div className="flex flex-col lg:flex-row items-center gap-3 mb-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-primary group-hover:text-primary/80 transition-colors">
+                      {item.title}
+                    </h3>
+                    {/* Decorative wavy line for desktop */}
+                    <svg className="hidden lg:block w-8 h-8 text-primary opacity-30 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 12c-2.66 0-2.66-4-5.33-4-2.66 0-2.66 4-5.33 4-2.66 0-2.66-4-5.33-4-2.66 0-2.66 4-5.33 4z"></path>
+                    </svg>
+                  </div>
+                  <p className="text-foreground/70 text-sm md:text-base leading-relaxed max-w-sm">
+                    {item.desc}
+                  </p>
                 </div>
-                <p className="text-foreground/70 text-sm md:text-base leading-relaxed max-w-sm">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </FadeIn>
 
           {/* Center Image */}
           <FadeIn direction="up" delay={0.2} className="relative w-full max-w-[300px] md:max-w-[400px] aspect-square mx-auto order-1 lg:order-2 rounded-full overflow-hidden shadow-2xl border-[8px] border-white z-10 bg-black/5">
-            <Image src="/images/BoxGift.jpg" alt="Lợi ích nấm lim xanh" fill className="object-cover hover:scale-105 transition-transform duration-700" />
+            <Image src="/images/BenefitReishi.jpg" alt="Lợi ích nấm lim xanh" fill sizes="100vw" className="object-cover hover:scale-105 transition-transform duration-700" />
           </FadeIn>
 
           {/* Right Column */}
@@ -239,22 +242,25 @@ export default function Home() {
               { title: "Kiểm soát đường huyết", desc: "Cân bằng lượng đường trong máu, rất tốt cho bệnh nhân tiểu đường." },
               { title: "Chống lão hóa", desc: "Chứa nhiều chất chống oxy hóa mạnh giúp làm chậm quá trình lão hóa da và cơ thể." },
               { title: "Cải thiện giấc ngủ", desc: "Làm dịu hệ thần kinh, giảm căng thẳng mệt mỏi, mang lại giấc ngủ sâu và ngon hơn." },
-            ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center lg:items-start text-center lg:text-left group cursor-default">
-                <div className="flex flex-col lg:flex-row-reverse items-center gap-3 mb-2">
-                  <h3 className="text-xl md:text-2xl font-bold text-primary group-hover:text-primary/80 transition-colors">
-                    {item.title}
-                  </h3>
-                  {/* Decorative wavy line for desktop */}
-                  <svg className="hidden lg:block w-8 h-8 text-primary opacity-30 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M2 12c2.66 0 2.66-4 5.33-4 2.66 0 2.66 4 5.33 4 2.66 0 2.66-4 5.33-4 2.66 0 2.66 4 5.33 4z"></path>
-                  </svg>
+            ].map((item, index) => {
+              const translateClass = index === 0 || index === 3 ? "lg:-translate-x-8" : "lg:translate-x-4";
+              return (
+                <div key={index} className={`flex flex-col items-center lg:items-start text-center lg:text-left group cursor-default transition-transform duration-500 hover:scale-105 ${translateClass}`}>
+                  <div className="flex flex-col lg:flex-row-reverse items-center gap-3 mb-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-primary group-hover:text-primary/80 transition-colors">
+                      {item.title}
+                    </h3>
+                    {/* Decorative wavy line for desktop */}
+                    <svg className="hidden lg:block w-8 h-8 text-primary opacity-30 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M2 12c2.66 0 2.66-4 5.33-4 2.66 0 2.66 4 5.33 4 2.66 0 2.66-4 5.33-4 2.66 0 2.66 4 5.33 4z"></path>
+                    </svg>
+                  </div>
+                  <p className="text-foreground/70 text-sm md:text-base leading-relaxed max-w-sm">
+                    {item.desc}
+                  </p>
                 </div>
-                <p className="text-foreground/70 text-sm md:text-base leading-relaxed max-w-sm">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </FadeIn>
         </div>
       </section>
@@ -272,7 +278,7 @@ export default function Home() {
 
         {/* Filter Tabs */}
         <FadeIn delay={0.1} className="flex items-center gap-2 md:gap-4 mb-10 overflow-x-auto pb-2 scrollbar-hide max-w-[95%] 2xl:max-w-[1440px] w-full justify-start md:justify-center">
-          {["Tất cả", "Nấm Nguyên Khúc", "Nấm Thái Lát", "Chế Phẩm Khác"].map((tab, index) => (
+          {["Tất cả", "Nấm Nguyên Tai", "Nấm Thái Lát", "Chế Phẩm Khác"].map((tab, index) => (
             <button
               key={index}
               className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-bold transition-colors border ${index === 0
@@ -288,7 +294,7 @@ export default function Home() {
         {/* Product Grid */}
         <FadeIn delay={0.2} className="w-full max-w-[95%] 2xl:max-w-[1440px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
           {[
-            { tag: "Nổi bật", cat: "Nấm Khúc", title: "Nấm Lim Xanh Nguyên Khúc", img: "/images/BoxGift.jpg" },
+            { tag: "Nổi bật", cat: "Nấm Khúc", title: "Nấm Lim Xanh Nguyên Tai", img: "/images/BoxGift.jpg" },
             { tag: "Bán chạy", cat: "Thái Lát", title: "Nấm Lim Xanh Thái Lát", img: "/images/BoxGift.jpg" },
             { tag: "Mới", cat: "Chế Phẩm", title: "Trà Túi Lọc Nấm Lim Xanh", img: "/images/BoxGift.jpg" },
             { tag: "Cao cấp", cat: "Chế Phẩm", title: "Bào Tử Nấm Lim Xanh", img: "/images/BoxGift.jpg" },
@@ -299,7 +305,7 @@ export default function Home() {
                 <div className="absolute top-4 left-4 bg-white text-foreground px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm z-10">
                   {item.tag}
                 </div>
-                <Image src={item.img} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src={item.img} alt={item.title} fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
 
               {/* Text Info */}

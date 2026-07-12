@@ -5,6 +5,7 @@ interface ParallaxHeroProps {
     backgroundImage: string;
     overlayClass?: string;
     containerClass?: string;
+    imageClass?: string;
     children: React.ReactNode;
 }
 
@@ -12,6 +13,7 @@ export default function ParallaxHero({
     backgroundImage,
     overlayClass = "bg-black/40",
     containerClass = "h-[460px] pt-24 md:pt-32",
+    imageClass = "",
     children,
 }: ParallaxHeroProps) {
     return (
@@ -27,9 +29,9 @@ export default function ParallaxHero({
                     <Image
                         src={backgroundImage}
                         alt="Background"
-                        fill
+                        fill sizes="100vw"
                         priority
-                        className="hero-parallax-anim object-cover scale-[1.02]"
+                        className={`hero-parallax-anim object-cover scale-[1.02] ${imageClass}`}
                     />
                     <div className={`absolute inset-0 ${overlayClass}`} />
                 </div>

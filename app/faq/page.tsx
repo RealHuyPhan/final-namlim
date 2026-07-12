@@ -86,7 +86,7 @@ export default function FAQPage() {
             <div className="bg-[#3E1C16] rounded-2xl p-8 flex flex-col items-center text-center shadow-lg mt-4">
               <span className="text-white/60 text-[10px] font-semibold tracking-widest uppercase mb-2">ĐỒNG HÀNH CÙNG KHÁCH HÀNG</span>
               <h4 className="text-white text-xl font-bold mb-6">Chưa tìm thấy câu hỏi của bạn?</h4>
-              <Link href="tel:0123456789" className="w-full py-3.5 bg-[#D4A373] hover:bg-[#c39162] text-[#3E1C16] font-bold rounded-full transition-colors flex items-center justify-center gap-2 text-sm tracking-wider shadow-sm">
+              <Link href="tel:+84943363363" className="w-full py-3.5 bg-[#D4A373] hover:bg-[#c39162] text-[#3E1C16] font-bold rounded-full transition-colors flex items-center justify-center gap-2 text-sm tracking-wider shadow-sm">
                 <PhoneCall className="w-4 h-4" />
                 GỌI TỔNG ĐÀI
               </Link>

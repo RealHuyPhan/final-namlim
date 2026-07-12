@@ -56,7 +56,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
             <Image
               src={mainImage}
               alt={product.title}
-              fill
+              fill sizes="100vw"
               className="object-cover"
             />
           </div>
@@ -71,7 +71,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                   onClick={() => setMainImage(img)}
                   className={`relative aspect-square rounded-2xl overflow-hidden border-2 transition-all duration-300 ${isActive ? "border-[#D4A373] shadow-md opacity-100" : "border-transparent opacity-60 hover:opacity-100"}`}
                 >
-                  <Image src={img} alt={`${product.title} - thumbnail ${idx + 1}`} fill className="object-cover" />
+                  <Image src={img} alt={`${product.title} - thumbnail ${idx + 1}`} fill sizes="100vw" className="object-cover" />
                 </button>
               );
             })}
@@ -185,7 +185,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
               <span className="text-white/60 text-xs mt-1">Chuyên viên hỗ trợ trực tuyến 24/7</span>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-              <Link href="tel:0123456789" className="flex items-center justify-center gap-2 bg-[#D4A373] hover:bg-[#c39162] text-[#3E1C16] px-6 py-3 rounded-lg font-bold text-sm transition-colors whitespace-nowrap">
+              <Link href="tel:+84943363363" className="flex items-center justify-center gap-2 bg-[#D4A373] hover:bg-[#c39162] text-[#3E1C16] px-6 py-3 rounded-lg font-bold text-sm transition-colors whitespace-nowrap">
                 <PhoneCall className="w-4 h-4" /> GỌI NGAY
               </Link>
               <Link href="#" className="flex items-center justify-center gap-2 bg-transparent border border-white/20 hover:bg-white/10 text-white px-6 py-3 rounded-lg font-bold text-sm transition-colors whitespace-nowrap">
@@ -214,7 +214,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
               <Link href={`/products/${item.id}`} key={index} className="flex flex-col group cursor-pointer h-full bg-white p-5 md:p-6 rounded-[32px] shadow-sm border border-black/5 hover:shadow-lg transition-all duration-300">
                 {/* Image Container */}
                 <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-5 bg-black/5">
-                  <Image src={item.image} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src={item.image} alt={item.title} fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
 
                 {/* Info */}

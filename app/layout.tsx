@@ -4,6 +4,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,12 +34,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <Header />
         <main className="flex-1">
           <SmoothScroll>{children}</SmoothScroll>
         </main>
         <Footer />
+        <FloatingContact />
       </body>
     </html>
   );

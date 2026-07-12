@@ -37,9 +37,9 @@ export default async function BlogPage(props: { searchParams?: Promise<{ [key: s
           {/* Right Image */}
           <FadeIn direction="left" delay={0.2} className="relative w-full h-[350px] md:h-[450px] lg:h-[500px] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-black/5">
             <Image
-              src="/images/BoxGift.jpg"
+              src="/images/BlogImageCover.jpg"
               alt="Mô hình trồng nấm lim xanh"
-              fill
+              fill sizes="100vw"
               className="object-cover"
             />
           </FadeIn>
@@ -63,7 +63,7 @@ export default async function BlogPage(props: { searchParams?: Promise<{ [key: s
             <FadeIn direction="up" delay={0.1} className="lg:col-span-2">
               <Link href="/blog/phuc-trang-nguon-gen" className="flex flex-col md:flex-row bg-[#F8F3ED] rounded-[24px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow h-full">
                 <div className="w-full md:w-[45%] h-[200px] md:h-auto relative overflow-hidden">
-                  <Image src="/images/HomeBG.jpg" alt="Nghiên cứu nấm" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src="/images/HomeBG.jpg" alt="Nghiên cứu nấm" fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="w-full md:w-[55%] p-6 md:p-8 flex flex-col justify-center relative">
                   <ArrowRight className="absolute top-6 right-6 w-5 h-5 text-[#C67C4E] opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
@@ -125,7 +125,7 @@ export default async function BlogPage(props: { searchParams?: Promise<{ [key: s
             {/* Card 4: Từ thực phẩm sạch (Col-Span-2) */}
             <FadeIn direction="up" delay={0.4} className="lg:col-span-2">
               <Link href="/blog/tu-thuc-pham-sach-den-sieu-thuc-pham" className="relative rounded-[24px] overflow-hidden group min-h-[260px] flex flex-col justify-end p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow h-full block">
-                <Image src="/images/BoxGift.jpg" alt="Từ thực phẩm sạch" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/BoxGift.jpg" alt="Từ thực phẩm sạch" fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 
                 <div className="relative z-10 w-full max-w-2xl">
@@ -170,7 +170,7 @@ export default async function BlogPage(props: { searchParams?: Promise<{ [key: s
                           <Image
                             src={post.image}
                             alt={post.title}
-                            fill
+                            fill sizes="100vw"
                             className="object-cover group-hover:scale-105 transition-transform duration-700"
                           />
                         </Link>

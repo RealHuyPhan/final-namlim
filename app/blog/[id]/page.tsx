@@ -75,7 +75,7 @@ export default async function BlogPostPage(props: { params: Promise<{ id: string
               <Image
                 src={post.image}
                 alt={post.title}
-                fill
+                fill sizes="100vw"
                 className="object-cover"
                 priority
               />
@@ -137,7 +137,7 @@ export default async function BlogPostPage(props: { params: Promise<{ id: string
                       <Image
                         src={rp.image}
                         alt={rp.title}
-                        fill
+                        fill sizes="100vw"
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>

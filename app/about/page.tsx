@@ -20,8 +20,8 @@ export default function AboutPage() {
   return (
     <div className="w-full bg-[#FAFAFA] min-h-screen">
       <ParallaxHero
-        backgroundImage="/images/HomeBG.jpg"
-        containerClass="h-[40vh] md:h-[50vh] min-h-[400px] flex flex-col items-center justify-center mt-10 md:mt-0"
+        backgroundImage="/images/AboutUsBG.jpg"
+        containerClass="h-[60vh] md:h-[75vh] min-h-[500px] flex flex-col items-center justify-center"
         overlayClass="bg-gradient-to-r from-black/80 via-black/40 to-transparent"
       >
         <div className="relative z-10 w-full max-w-[95%] 2xl:max-w-[1440px] px-6 flex flex-col items-start mt-16 md:mt-20">
@@ -44,7 +44,7 @@ export default function AboutPage() {
 
           {/* Left Column - Image */}
           <FadeIn direction="right" className="lg:col-span-5 mx-auto max-w-md lg:max-w-full relative w-full aspect-[4/5] lg:aspect-[3/4] rounded-[32px] overflow-hidden shadow-2xl border-8 border-white bg-black/5">
-            <Image src="/images/CEO.jpg" alt="CEO Lê Văn Hợp" fill className="object-cover object-center" />
+            <Image src="/images/CEO.jpg" alt="CEO Lê Văn Hợp" fill sizes="100vw" className="object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             <div className="absolute bottom-8 left-8">
               <p className="text-white font-bold text-3xl drop-shadow-md mb-1">Ông Lê Văn Hợp</p>
@@ -120,7 +120,7 @@ export default function AboutPage() {
               {[
                 { title: "2018", desc: "Nấm lim xanh được thu hái cẩn thận từ những gốc lim xanh mục trong rừng sâu, đảm bảo độ tuổi và chất lượng tốt nhất.", img: "/images/BoxGift.jpg" },
                 { title: "2021", desc: "Sau khi thu hái, nấm được làm sạch loại bỏ độc tố và sấy khô tự nhiên bằng hệ thống khép kín đạt chuẩn.", img: "/images/HomeBG.jpg" },
-                { title: "2023", desc: "Mỗi lô nấm đều được kiểm định hàm lượng dược chất tại các viện nghiên cứu uy tín trước khi đóng gói.", img: "/images/BoxGift.jpg" },
+                { title: "2023", desc: "Mỗi lô nấm đều được kiểm định hàm lượng dược chất trước khi đóng gói.", img: "/images/BoxGift.jpg" },
                 { title: "2026", desc: "Sản phẩm được đóng gói bằng vật liệu thân thiện, bảo quản an toàn tuyệt đối và trao đến tay người tiêu dùng.", img: "/images/HomeBG.jpg" }
               ].map((item, index) => {
                 const isEven = index % 2 === 0;
@@ -131,7 +131,7 @@ export default function AboutPage() {
                     <div className={`w-full md:w-1/2 flex flex-col pl-12 md:py-0 ${isEven ? 'md:pl-0 md:pr-16 lg:pr-24 md:items-end' : 'md:pl-16 lg:pl-24 md:items-start'}`}>
                       <FadeIn direction={isEven ? "right" : "left"} className="w-full max-w-lg flex flex-col gap-6">
                         <div className="relative w-full aspect-[16/9] md:aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden shadow-sm">
-                          <Image src={item.img} alt={item.title} fill className="object-cover" />
+                          <Image src={item.img} alt={item.title} fill sizes="100vw" className="object-cover" />
                         </div>
                         <div className="flex flex-col gap-4 mt-2 w-full text-left">
                           <div className="flex items-center gap-4">
@@ -181,7 +181,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 w-full">
             {/* Tầm Nhìn (2 columns, 2 rows wide) */}
             <FadeIn className="lg:col-span-2 lg:row-span-2 relative rounded-[32px] overflow-hidden group shadow-2xl p-8 md:p-12 flex flex-col justify-between min-h-[500px]">
-              <Image src="/images/HomeBG.jpg" alt="Tầm nhìn" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="/images/HomeBG.jpg" alt="Tầm nhìn" fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#3E1C16]/95 via-[#3E1C16]/80 to-[#3E1C16]/40"></div>
 
               <div className="relative z-10 w-full mb-12">
@@ -275,9 +275,9 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 w-full">
             {[
-              { num: "01", title: "Thu Hái", desc: "Nấm lim xanh được thu hái cẩn thận từ những gốc lim xanh mục trong rừng sâu, đảm bảo độ tuổi và chất lượng tốt nhất." },
-              { num: "02", title: "Sơ Chế", desc: "Sau khi thu hái, nấm được làm sạch loại bỏ độc tố và sấy khô tự nhiên bằng hệ thống khép kín đạt chuẩn." },
-              { num: "03", title: "Kiểm Định", desc: "Mỗi lô nấm đều được kiểm định hàm lượng dược chất tại các viện nghiên cứu uy tín trước khi đóng gói." },
+              { num: "01", title: "Thu Hái", desc: "Nấm lim xanh được thu hái cẩn thận tại vùng nguyên liệu đạt chuẩn." },
+              { num: "02", title: "Sơ Chế", desc: "Nấm lim xanh được xử lý độc tố và sấy khô tự nhiên." },
+              { num: "03", title: "Kiểm Định", desc: "Mỗi lô nấm đều được kiểm định hàm lượng dược chất trước khi đóng gói." },
               { num: "04", title: "Thành Phẩm", desc: "Sản phẩm được đóng gói bằng vật liệu thân thiện, bảo quản an toàn tuyệt đối và trao đến tay người tiêu dùng." }
             ].map((item, index) => (
               <FadeIn key={index} delay={index * 0.15} direction="up" className="flex flex-col group">
@@ -314,13 +314,13 @@ export default function AboutPage() {
               <FadeIn key={index} delay={index * 0.15} direction="up" className="w-full">
                 <div
                   className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group border border-black/5 bg-white p-4 cursor-pointer"
-                  onClick={() => setSelectedCert('/images/CamKet.webp')}
+                  onClick={() => setSelectedCert('/images/CamKet.jpg')}
                 >
                   <div className="relative w-full h-full rounded-xl overflow-hidden bg-[#FAFAFA]">
                     <Image
-                      src="/images/CamKet.webp"
+                      src="/images/CamKet.jpg"
                       alt={`Giấy phép ${item}`}
-                      fill
+                      fill sizes="100vw"
                       className="object-contain group-hover:scale-105 transition-transform duration-700"
                     />
                     {/* Hover overlay with zoom icon */}
@@ -364,7 +364,7 @@ export default function AboutPage() {
               <Image
                 src={selectedCert}
                 alt="Certificate Detail"
-                fill
+                fill sizes="100vw"
                 className="object-contain"
               />
             </motion.div>

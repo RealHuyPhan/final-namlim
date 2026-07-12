@@ -22,7 +22,7 @@ function ProductsContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
-  
+
   const activeCategory = searchParams.get("category") || "all";
 
   const setActiveCategory = (id: string) => {
@@ -44,8 +44,9 @@ function ProductsContent() {
   return (
     <div className="w-full bg-[#FAFAFA]">
       <ParallaxHero
-        backgroundImage="/images/HomeBG.jpg"
-        containerClass="h-[40vh] md:h-[50vh] min-h-[400px] flex flex-col items-center justify-center mt-10 md:mt-0"
+        backgroundImage="/images/ProductBG.jpg"
+        containerClass="h-[40vh] md:h-[60vh] min-h-[400px] flex flex-col items-center justify-center mt-10 md:mt-0"
+        imageClass="object-[center_115%]"
         overlayClass="bg-gradient-to-r from-black/80 via-black/40 to-transparent"
       >
         <div className="relative z-10 w-full max-w-[95%] 2xl:max-w-[1440px] px-6 flex flex-col items-start mt-16 md:mt-20">
@@ -101,7 +102,7 @@ function ProductsContent() {
             <div className="bg-[#3E1C16] rounded-2xl p-6 flex flex-col items-center text-center shadow-lg mt-4">
               <span className="text-white/60 text-[10px] font-semibold tracking-widest uppercase mb-2">Chăm sóc khách hàng</span>
               <h4 className="text-white text-xl font-bold mb-6">Bạn cần tư vấn?</h4>
-              <Link href="tel:0123456789" className="w-full py-3.5 bg-[#D4A373] hover:bg-[#c39162] text-[#3E1C16] font-bold rounded-full transition-colors flex items-center justify-center gap-2 text-sm tracking-wider shadow-sm">
+              <Link href="tel:+84943363363" className="w-full py-3.5 bg-[#D4A373] hover:bg-[#c39162] text-[#3E1C16] font-bold rounded-full transition-colors flex items-center justify-center gap-2 text-sm tracking-wider shadow-sm">
                 <PhoneCall className="w-4 h-4" />
                 GỌI NGAY
               </Link>
@@ -133,7 +134,7 @@ function ProductsContent() {
                       <div className="absolute top-4 left-4 bg-white text-[#3E1C16] px-3 py-1.5 rounded-md text-[10px] font-bold uppercase tracking-wider shadow-sm z-10">
                         {item.tag}
                       </div>
-                      <Image src={item.image} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                      <Image src={item.image} alt={item.title} fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                     </div>
 
                     {/* Info */}
