@@ -1,4 +1,15 @@
-export const BLOG_POSTS = [
+export interface BlogPost {
+  id: string;
+  title: string;
+  category: string;
+  image: string;
+  date: string;
+  excerpt: string;
+  tags: string[];
+  content?: string;
+}
+
+export const BLOG_POSTS: BlogPost[] = [
   {
     id: "phuc-trang-nguon-gen",
     title: "Nghiên cứu khoa học: Phục tráng và phát triển nguồn gen nấm Lim xanh bản địa",
