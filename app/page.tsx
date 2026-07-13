@@ -136,7 +136,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-4 w-full lg:h-[480px]">
               {/* Item 1 - Large Left */}
               <Link href="/blog/quy-trinh-san-xuat-khep-kin" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group md:col-span-2 lg:col-span-2 lg:row-span-2 min-h-[350px] lg:min-h-0 border-2 border-white/20 bg-black/10">
-                <Image src="/images/BoxGift.jpg" alt="Kỹ thuật Trồng Nấm Khép Kín" fill sizes="100vw" className="object-cover transition-transform duration-500" />
+                <Image src="/images/QuyTrinh.png" alt="Kỹ thuật Trồng Nấm Khép Kín" fill sizes="100vw" className="object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8">
                   <h3 className="text-white text-2xl md:text-3xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     Quy trình sản xuất nấm khép kín
@@ -149,7 +149,7 @@ export default function Home() {
 
               {/* Item 2 - Middle Top */}
               <Link href="/blog/nam-nuoi-trong-va-tu-nhien" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group lg:col-span-1 lg:row-span-1 min-h-[250px] lg:min-h-0 border-2 border-white/20 bg-black/10">
-                <Image src="/images/BoxGift.jpg" alt="Bảo Tồn Nguồn Gen Quý" fill sizes="100vw" className="object-cover transition-transform duration-500" />
+                <Image src="/images/nuoitrongTunhien.png" alt="Bảo Tồn Nguồn Gen Quý" fill sizes="100vw" className="object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6">
                   <h3 className="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     Nấm nuôi trồng & tự nhiên
@@ -162,7 +162,7 @@ export default function Home() {
 
               {/* Item 3 - Middle Bottom */}
               <Link href="/blog/say-lanh-va-say-nhiet" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group lg:col-span-1 lg:row-span-1 lg:col-start-3 lg:row-start-2 min-h-[250px] lg:min-h-0 border-2 border-white/20 bg-black/10">
-                <Image src="/images/BoxGift.jpg" alt="Thu Hoạch Hữu Cơ" fill sizes="100vw" className="object-cover transition-transform duration-500" />
+                <Image src="/images/SayNhiet.png" alt="Thu Hoạch Hữu Cơ" fill sizes="100vw" className="object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6">
                   <h3 className="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     Sấy lạnh hay sấy nhiệt?
@@ -175,7 +175,7 @@ export default function Home() {
 
               {/* Item 4 - Tall Right */}
               <Link href="/blog/quoc-bao-duoc-lieu" className="block relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg group md:col-span-2 lg:col-span-1 lg:row-span-2 lg:col-start-4 lg:row-start-1 min-h-[400px] lg:min-h-0 border-2 border-white/20 bg-black/10">
-                <Image src="/images/BoxGift.jpg" alt="Môi Trường Sinh Thái" fill sizes="100vw" className="object-cover transition-transform duration-500" />
+                <Image src="/images/quocbaoduocLieu.png" alt="Môi Trường Sinh Thái" fill sizes="100vw" className="object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6">
                   <h3 className="text-white text-xl md:text-2xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     &quot;Quốc bảo dược liệu&quot; Việt Nam
@@ -294,8 +294,8 @@ export default function Home() {
         {/* Product Grid */}
         <FadeIn delay={0.2} className="w-full max-w-[95%] 2xl:max-w-[1440px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
           {[
-            { tag: "Nổi bật", cat: "Nấm Khúc", title: "Nấm Lim Xanh Nguyên Tai", img: "/images/BoxGift.jpg" },
-            { tag: "Bán chạy", cat: "Thái Lát", title: "Nấm Lim Xanh Thái Lát", img: "/images/BoxGift.jpg" },
+            { tag: "Nổi bật", cat: "Nấm Khúc", title: "Nấm Lim Xanh Nguyên Tai", img: "/images/ReishiMushroom.png" },
+            { tag: "Bán chạy", cat: "Thái Lát", title: "Nấm Lim Xanh Thái Lát", img: "/images/ReishiMushroomSlices.png" },
             { tag: "Mới", cat: "Chế Phẩm", title: "Trà Túi Lọc Nấm Lim Xanh", img: "/images/BoxGift.jpg" },
             { tag: "Cao cấp", cat: "Chế Phẩm", title: "Bào Tử Nấm Lim Xanh", img: "/images/BoxGift.jpg" },
           ].map((item, index) => (

@@ -14,7 +14,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "phuc-trang-nguon-gen",
     title: "Nghiên cứu khoa học: Phục tráng và phát triển nguồn gen nấm Lim xanh bản địa",
     category: "nghien-cuu",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "12 Tháng 7, 2026",
     excerpt: "Đề tài khoa học cấp Bộ do Đại học Lâm nghiệp chủ trì phối hợp với HTX Hải Nam nghiên cứu phục tráng và phát triển nguồn gen nấm quý hiếm.",
     tags: ["namlimxanh", "khoahoc"]
@@ -32,7 +32,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "phan-biet-nam-lim-xanh",
     title: "Báo Sức Khỏe Đời Sống: Cách phân biệt nấm lim xanh rừng và nấm nuôi trồng",
     category: "bao-chi",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "08 Tháng 7, 2026",
     excerpt: "Lời khuyên từ các bác sĩ Đông Y đầu ngành trong việc lựa chọn nấm lim xanh chuẩn chất lượng, tránh mua phải hàng giả, hàng kém chất lượng.",
     tags: ["namlimxanh", "duoclieuquy"]
@@ -59,7 +59,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "linh-chi-ban-dia-cao-cap",
     title: "Tại sao nấm lim xanh được gọi là \"linh chi bản địa cao cấp\" của Việt Nam?",
     category: "gioi-thieu",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "08 Tháng 7, 2026",
     excerpt: "Khám phá lịch sử, giá trị y học và lý do nấm lim xanh được giới chuyên gia đánh giá là một trong những loại dược liệu quý giá nhất mang tính bản địa của Việt Nam.",
     tags: ["duoclieuquy", "lichsu"]
@@ -77,7 +77,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "nam-nuoi-trong-va-tu-nhien",
     title: "Nấm lim xanh nuôi trồng và nấm lim xanh tự nhiên: Khác nhau như thế nào?",
     category: "gioi-thieu",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960327/final-namlim/aztwzpk1sca9l6if9tn3.png",
     date: "01 Tháng 7, 2026",
     excerpt: "So sánh toàn diện về đặc điểm, dược tính và giá trị kinh tế giữa nấm lim xanh thu hái từ rừng tự nhiên và nấm nuôi trồng theo mô hình khép kín.",
     tags: ["nuoitrong", "tunhien", "sosanh"]
@@ -95,7 +95,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "so-sanh-nam-nhat-ban",
     title: "Nấm lim xanh và nấm linh chi Nhật Bản: So sánh hàm lượng dược chất theo khoa học",
     category: "gioi-thieu",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "25 Tháng 6, 2026",
     excerpt: "Báo cáo so sánh hàm lượng các hoạt chất sinh học quý giá giữa nấm lim xanh Việt Nam và nấm linh chi nhập khẩu từ Nhật Bản.",
     tags: ["khoahoc", "sosanh"]
@@ -113,7 +113,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "vi-sao-bi-lam-gia",
     title: "Vì sao nấm lim xanh bị làm giả nhiều? Cách nhận biết sản phẩm chuẩn",
     category: "gioi-thieu",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "15 Tháng 6, 2026",
     excerpt: "Đi sâu vào thực trạng thị trường thảo dược hiện nay, nguyên nhân khiến nấm lim xanh bị làm giả và cách chọn mua sản phẩm đúng chuẩn.",
     tags: ["thitruong", "thatgia"]
@@ -131,7 +131,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "quy-trinh-san-xuat-khep-kin",
     title: "Quy trình sản xuất nấm lim xanh khép kín: Từ phôi giống đến thành phẩm",
     category: "gioi-thieu",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960330/final-namlim/z9nq0xygsglzd5ugc62p.png",
     date: "05 Tháng 6, 2026",
     excerpt: "Trực tiếp tham quan mô hình nuôi trồng và sản xuất đạt chuẩn HACCP, từ khâu chọn lọc phôi giống khắt khe đến khi ra mắt thành phẩm.",
     tags: ["quytrinh", "chuanhaccp"]
@@ -140,7 +140,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "say-lanh-va-say-nhiet",
     title: "Sấy lạnh và sấy nhiệt: Phương pháp nào bảo toàn dược chất tốt hơn?",
     category: "gioi-thieu",
-    image: "/images/BoxGift.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960332/final-namlim/v8tfgc5u3sgi40jsfljw.png",
     date: "01 Tháng 6, 2026",
     excerpt: "Phân tích ưu nhược điểm của hai công nghệ sấy phổ biến nhất hiện nay và tác động của chúng lên hàm lượng dưỡng chất trong nấm.",
     tags: ["congnghe", "chebien"]
@@ -149,7 +149,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "hanh-trinh-vuon-tam-quoc-te",
     title: "Hành trình đưa nấm lim xanh Việt Nam vươn tầm quốc tế",
     category: "gioi-thieu",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "25 Tháng 5, 2026",
     excerpt: "Câu chuyện về nỗ lực không ngừng nghỉ của các hợp tác xã nhằm đưa dược liệu quý của Việt Nam đáp ứng các tiêu chuẩn xuất khẩu quốc tế.",
     tags: ["quocte", "xuatkhau"]
@@ -158,7 +158,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "quoc-bao-duoc-lieu",
     title: "Tại sao nấm lim xanh xứng đáng trở thành \"quốc bảo dược liệu\" của Việt Nam?",
     category: "gioi-thieu",
-    image: "/images/BoxGift.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960334/final-namlim/stlf8bquy7axgvsyyy6j.png",
     date: "20 Tháng 5, 2026",
     excerpt: "Nhìn lại toàn bộ hành trình và giá trị y học to lớn, minh chứng cho danh xưng cao quý dành cho nấm lim xanh.",
     tags: ["duoclieuquy", "quocbao"]
@@ -167,7 +167,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "tang-cuong-mien-dich",
     title: "Nấm lim xanh hỗ trợ tăng cường miễn dịch như thế nào? Cơ chế khoa học",
     category: "cong-dung",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "15 Tháng 5, 2026",
     excerpt: "Phân tích cơ chế tác động của các hoạt chất sinh học trong nấm lim xanh giúp kích hoạt và tăng cường sức đề kháng tự nhiên của cơ thể.",
     tags: ["miendich", "khoahoc"]
@@ -185,7 +185,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "dieu-hoa-huyet-ap",
     title: "Nấm lim xanh và huyết áp cao: Công dụng hỗ trợ điều hòa huyết áp",
     category: "cong-dung",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "05 Tháng 5, 2026",
     excerpt: "Tìm hiểu cách dược liệu quý này giúp giãn mạch, giảm áp lực lên thành mạch, từ đó duy trì mức huyết áp ổn định một cách an toàn.",
     tags: ["huyetap", "timdoc"]
@@ -203,7 +203,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "tac-dung-benh-nhan-ung-thu",
     title: "Nấm lim xanh có tác dụng gì với bệnh nhân ung thư? Những điều cần biết",
     category: "cong-dung",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "25 Tháng 4, 2026",
     excerpt: "Sự thật về khả năng hỗ trợ ức chế tế bào ung thư, giảm tác dụng phụ của hóa xạ trị và nâng cao thể trạng cho người bệnh.",
     tags: ["ungthu", "hotrodieutri"]
@@ -221,7 +221,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "ganoderic-acid-bao-ve-gan",
     title: "Ganoderic acid trong nấm lim xanh: Tác dụng bảo vệ gan và chống viêm",
     category: "cong-dung",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "15 Tháng 4, 2026",
     excerpt: "Đi sâu tìm hiểu vai trò của Ganoderic acid - một trong những hoạt chất quan trọng nhất giúp bảo vệ màng tế bào gan khỏi các tác nhân độc hại.",
     tags: ["khoahoc", "ganoderic", "baovegan"]
@@ -239,7 +239,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "adenosine-suc-khoe-tim-mach",
     title: "Adenosine trong nấm lim xanh có tác dụng gì với sức khỏe tim mạch?",
     category: "cong-dung",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "05 Tháng 4, 2026",
     excerpt: "Khám phá hoạt chất Adenosine và cơ chế cải thiện lưu thông máu, ngăn ngừa hình thành cục máu đông gây nguy cơ nhồi máu cơ tim.",
     tags: ["khoahoc", "adenosine", "timmach"]
@@ -257,7 +257,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "chong-oxy-hoa-lao-hoa",
     title: "Nấm lim xanh có giúp chống oxy hóa, làm chậm lão hóa không?",
     category: "cong-dung",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "25 Tháng 3, 2026",
     excerpt: "Bí quyết làm đẹp từ bên trong: Cách các chất chống oxy hóa mạnh mẽ trong nấm lim xanh giúp duy trì làn da tươi trẻ và sức khỏe dẻo dai.",
     tags: ["laohoa", "lamdep", "chongoxyhoa"]
@@ -284,7 +284,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "nam-thai-lat-dung-nhu-the-nao",
     title: "Nấm lim xanh thái lát dùng như thế nào? Hướng dẫn chi tiết từ A đến Z",
     category: "cach-su-dung",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "20 Tháng 4, 2026",
     excerpt: "Khám phá sự tiện lợi và các phương pháp hãm trà, ngâm rượu, nấu súp nhanh chóng với nấm lim xanh đã thái lát.",
     tags: ["cachsudung", "thailat"]
@@ -302,7 +302,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "lieu-dung-nam-lim-xanh",
     title: "Uống nấm lim xanh bao nhiêu là đủ? Liều dùng theo từng đối tượng",
     category: "cach-su-dung",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "10 Tháng 4, 2026",
     excerpt: "Tư vấn chi tiết liều lượng sử dụng nước nấm lim xanh mỗi ngày cho người bệnh cần hỗ trợ điều trị và người bình thường phòng bệnh.",
     tags: ["cachsudung", "lieudung"]
@@ -320,7 +320,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "am-dat-hay-noi-inox",
     title: "Sắc nấm lim xanh bằng ấm đất hay nồi inox? Ưu nhược điểm từng loại",
     category: "cach-su-dung",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "01 Tháng 4, 2026",
     excerpt: "Tại sao dụng cụ sắc thuốc lại quan trọng? So sánh việc dùng ấm đất truyền thống và nồi điện inox hiện đại khi đun nấm.",
     tags: ["cachsudung", "sacnam", "dungcu"]
@@ -338,7 +338,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "ket-hop-nam-lim-xanh",
     title: "Kết hợp nấm lim xanh với gì để tăng hiệu quả? (mật ong, táo đỏ, kỷ tử…)",
     category: "cach-su-dung",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "20 Tháng 3, 2026",
     excerpt: "Các bài thuốc kết hợp nấm lim xanh với thảo dược khác giúp làm dịu vị đắng, tăng cường công năng bồi bổ và điều trị bệnh.",
     tags: ["cachsudung", "kethop", "baithuoc"]
@@ -356,7 +356,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "xu-huong-functional-mushroom",
     title: "Xu hướng \"functional mushroom\" – Nấm dược liệu đang chinh phục thị trường toàn cầu",
     category: "tin-tuc",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "10 Tháng 5, 2026",
     excerpt: "Sự bùng nổ của nấm chức năng trong ngành công nghiệp thực phẩm bảo vệ sức khỏe thế giới và vị thế tiềm năng của nấm lim xanh.",
     tags: ["tintuc", "xuhuong", "toancau"]
@@ -374,7 +374,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "gacp-who-trong-trong-duoc-lieu",
     title: "GACP-WHO trong trồng dược liệu là gì? Tiêu chuẩn quốc tế mới nhất áp dụng tại Việt Nam",
     category: "tin-tuc",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "01 Tháng 5, 2026",
     excerpt: "Tin tức cập nhật về nỗ lực chuẩn hóa quy trình trồng nấm lim xanh đạt chứng nhận GACP-WHO, nâng tầm chất lượng dược liệu Việt.",
     tags: ["tintuc", "tieuchuan", "gacpwho"]
@@ -392,7 +392,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "nghien-cuu-moi-nhat-beta-glucan",
     title: "Nghiên cứu mới nhất về tác dụng của Beta-glucan trong phòng ngừa bệnh mạn tính",
     category: "tin-tuc",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "20 Tháng 4, 2026",
     excerpt: "Điểm tin hội thảo y khoa quốc tế xoay quanh khả năng phòng chống ung thư và tim mạch của hoạt chất Beta-glucan chiết xuất từ nấm.",
     tags: ["tintuc", "nghiencuu", "khoahoc"]
@@ -410,7 +410,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "kinh-te-xanh-tu-nam-lim",
     title: "Kinh tế xanh từ nấm lim xanh: Sinh kế bền vững cho người dân địa phương",
     category: "tin-tuc",
-    image: "/images/HomeBG.jpg",
+    image: "https://res.cloudinary.com/dovblxhx/image/upload/v1783960325/final-namlim/cqg1qgt04qd0pwgwd5kt.jpg",
     date: "10 Tháng 4, 2026",
     excerpt: "Sự kiện tổng kết dự án phát triển mô hình hợp tác xã trồng nấm dược liệu sạch, mang lại cơ hội làm giàu cho cộng đồng dân tộc thiểu số.",
     tags: ["tintuc", "kinhtexanh", "phattrien"]
